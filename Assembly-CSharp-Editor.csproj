@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{01e016d2-327a-b8ee-5e64-1a7df0a37de9}</ProjectGuid>
+    <ProjectGuid>{6927c8ec-f59b-f3e0-d9a2-cbb130c7a526}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -302,40 +302,40 @@
      <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="System.Runtime.CompilerServices.Unsafe">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     <HintPath>D:\MyGitHub\Assets\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="JsonFx.Json">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\JsonFx.Json.dll</HintPath>
+     <HintPath>D:\MyGitHub\Assets\Plugins\JsonFx.Json.dll</HintPath>
      </Reference>
      <Reference Include="Google.Protobuf">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\Google.Protobuf.dll</HintPath>
+     <HintPath>D:\MyGitHub\Assets\Plugins\Google.Protobuf.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.collab-proxy@1.15.16\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -719,82 +719,82 @@
      <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.TestRunner">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>D:\MyGitHub\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{70c5c7f8-b273-792f-2c3a-c6b403209bd7}</Project>
+      <Project>{3ed78cc5-5c5b-16ad-053a-224493a74725}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{d6f25b2e-c67f-f864-2463-275935bb2fd1}</Project>
+      <Project>{00e41c5c-2871-ef98-2af7-6f607c2b216d}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>

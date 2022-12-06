@@ -25,6 +25,7 @@ public class ProtoEditor : EditorWindow
             CSharpGenerator = string.Empty,
             CSharpOutput = string.Empty,
             JsonFilesPath = string.Empty;
+            
         public bool CSharp;
     }
 
