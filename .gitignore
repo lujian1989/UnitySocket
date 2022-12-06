@@ -1,0 +1,8 @@
+.idea/
+Assets/
+Library/
+Logs/
+obj/
+Temp/
+Packages/
+MyGitHub.sln
