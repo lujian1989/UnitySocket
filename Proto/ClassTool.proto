@@ -1,0 +1,19 @@
+syntax = "proto2";
+enum PLAYER_RANK
+{
+             ROOKIE=1;//新手
+             PRO=2;      //职业
+             ALL_STAR=3;//全明星
+             SUPER_STAR=4;//超级明星
+             HALL_OF_FAME=5;//名人堂
+};
+
+message BASKETBALL_LEVEL_DATA
+{
+               optional uint32 LEVEL=1;
+             
+};
+message BASKETBALL_RANK_DATA
+{
+               optional PLAYER_RANK RANK=1;
+};

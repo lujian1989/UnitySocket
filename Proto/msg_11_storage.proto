@@ -1,0 +1,66 @@
+
+syntax = "proto2";
+package STORAGE_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname ="STORAGE_MSG";
+
+
+enum CMD_TYPE {
+    MSG_TYPE_STORAGE = 11;
+};
+
+enum CMD_ID{
+  
+	   CTS_SET_STORAGE=1;
+	   CTS_GET_STORAGE=2;
+	   STC_GET_STORAGE=3;
+	   CTS_GET_GLOBAL=4;
+	   STC_GET_GLOBAL=5;
+    
+};
+
+enum ACTION_RESULT
+{
+		SUCCESS=1;
+		FAILED=2;
+};
+
+message CTS_SET_STORAGE_MSG
+{
+		required string KEY=1;
+		optional bytes  DATA=2;
+};
+message CTS_GET_STORAGE_MSG
+{
+		required string KEY=1;
+};
+message STC_GET_STORAGE_MSG
+{
+		required ACTION_RESULT RESULT=1;
+		optional string INFO=2;
+		optional string KEY=3;
+		optional bytes  DATA=4;
+};
+message CTS_GET_GLOBAL_MSG
+{
+		required uint32 PLAYER_ID=1;
+		required string KEY=2;
+};
+message STC_GET_GLOBAL_MSG
+{
+		required ACTION_RESULT RESULT=1;
+		optional string INFO=2;
+		optional string KEY=3;
+		optional bytes  DATA=4;
+		optional uint32 PLAYER_ID=5;
+};
+
+//玩家金币属性
+message PlayerCoinData
+{
+		required uint32 goldCoin=1;
+		required uint32 creditCoin=2;
+};
+

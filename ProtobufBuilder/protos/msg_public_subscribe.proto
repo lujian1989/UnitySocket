@@ -1,0 +1,89 @@
+syntax = "proto2";
+package msg_public_subscribe;
+import "protos/HardCordGirlDataClass.proto";
+
+
+message subscribe_Property_pos_msg
+{
+	required HardCordGirl_Data.VECTOR3 BodyPos = 1;
+    required HardCordGirl_Data.VECTOR3 BodyRot = 2;
+	required HardCordGirl_Data.VECTOR3 HandPos_Right = 3;
+    required HardCordGirl_Data.VECTOR3 HandRot_Right = 4;
+	required HardCordGirl_Data.VECTOR3 HandPos_Left = 5;
+    required HardCordGirl_Data.VECTOR3 HandRot_Left = 6;
+};
+
+message subscribe_Property_msg
+{
+    optional int32 UID = 1;
+	optional string Name = 2;
+	optional int32 Characteristic = 3;
+    optional int32 Level = 4;
+	optional int32 Permission = 5;
+	optional int32 Title = 6;
+	optional int32 RoomIndex = 7;
+    optional int32 State = 8;
+};
+
+message subscribe_ID_msg
+{
+   optional int32 UID = 1;
+};
+
+message subscribe_KtvScore_msg
+{
+   optional string SongName = 1;
+   optional string PlayerName = 2;
+   optional int32 Score = 3;
+};
+
+message subscribe_KtvVote_msg
+{
+   optional string SongName = 1;
+   optional int32 SongPlayerId = 2;
+   optional string PlayerName = 3;
+   optional int32 SongIndex = 4;
+};
+
+message VoteInfo_msg
+{
+     optional string SongName = 1;
+     optional string PlayerName = 2;
+     optional int32 PlayerId = 3;
+     optional int32 Num = 4;
+     optional string Head = 5;
+     optional int32 Characteristic = 6;   
+};
+
+message subscribe_VoteInfoList_msg
+{
+     repeated VoteInfo_msg VoteInfos = 1;
+};
+
+message AnswerInfo_msg
+{
+     optional string PlayerName = 1;
+     optional int32 PlayerId = 2;
+     optional string Head = 3;
+     optional int32 Characteristic = 4;   
+};
+
+message subscribe_AnswerInfoList_msg
+{
+     repeated AnswerInfo_msg AnswerInfos = 1;
+};
+
+message subscribe_Volume_msg
+{
+     optional float MicVolume = 1;
+     optional float NomalPlayerVolume = 2;
+};
+
+message subscribe_DJAni_msg
+{
+     optional int32 AniType = 1;
+};
+
+
+
+

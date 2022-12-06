@@ -1,0 +1,313 @@
+syntax = "proto2";
+package BASKETBALL_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "BASKETBALL_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_BASKETBALL = 6;
+};
+
+enum CMD_ID
+{
+            CTS_ENTER_BASKETBALL=1;
+            STC_ENTER_BASKETBALL=2;
+            CTS_CREATE_ROOM=3;
+            STC_CREATE_ROOM=4;
+            CTS_LEAVE_ROOM=5;
+            STC_LEAVE_ROOM=6;
+            CTS_JOIN_ROOM=7;
+            STC_JOIN_ROOM=8;
+            CTS_READY_STATE=9;
+            STC_READY_STATE=10;
+            CTS_KICK_PLAYER=11;
+            STC_KICK_PLAYER=12;
+            STC_KICK_NOTIFY=13;
+            CTS_ALL_READY_START=14;
+            STC_ALL_READY_START=15;
+            CTS_START_STATE=16;
+            STC_START_STATE=17;
+          
+            CTS_PLAYER_SHOOT=20;
+            STC_PLAYER_SHOOT=21;
+            CTS_PLAYER_SCORE=22;
+            STC_PLAYER_SCORE=23;
+            CTS_GAME_OVER=24;
+            STC_GAME_OVER=25;
+            
+            CTS_PLAYER_LIST=28;
+            STC_PLAYER_LIST=29;
+            CTS_ROOM_LIST=30;
+            STC_ROOM_LIST=31;
+            CTS_PLAYER_START_POS=32;
+            STC_PLAYER_START_POS=33;
+            CTS_PLAYER_INFO=34;
+            STC_PLAYER_INFO=35;
+            CTS_EXIT_GAME=36;
+            STC_EXIT_GAME=37;
+
+            CTS_PLAYER_POS=101;
+            STC_PLAYER_POS=102;
+            CTS_BALL_POS=103;
+            STC_BALL_POS=104;
+};
+
+
+enum ACTION_RESULT
+{
+            SUCCESS=1;
+            FAILED=2;
+};
+
+
+enum PLAYER_STATE
+{
+            READY = 1;    //已准备
+            NOT_READY = 2;     //未准备
+            LEAVE=3;//离开
+};
+
+enum PLAYER_RANK
+{
+             ROOKIE=1;//新手
+             PRO=2;      //职业
+             ALL_STAR=3;//全明星
+             SUPER_STAR=4;//超级明星
+             HALL_OF_FAME=5;//名人堂
+};
+
+
+message VECTOR3
+{
+              required float X = 1;
+              required float Y = 2;
+              required float Z = 3;
+}
+
+
+message ROOM_INFO{
+
+               required uint32 ROOM_ID=1;  //房间id
+               required string ROOM_OWNER_NAME=2; //房主id
+               required uint32 CURRENT_PLAYER_AMOUNT=3;//当前玩家数量
+               required uint32 ALL_PLAYER_AMOUNT=4;//房间最大玩家数
+               optional uint32 PRICE=5;//房间的花费
+}
+
+message PLAYER_INFO
+{
+	required uint32 PLAYER_ID = 1;   //玩家id
+                optional uint32 PLAYER_INDEX=2;
+                optional string PLAYER_NAME = 3;  //玩家名
+	required uint32 Characteristic = 4; //玩家形象类型
+                required PLAYER_STATE STATE=5;
+                optional PLAYER_RANK RANK=6;//玩家的排位
+}
+message PLAYER_BASIC_INFO
+{
+                required uint32 PLAYER_ID = 1;   //玩家id
+                optional string PLAYER_NAME = 2;  //玩家名
+                required uint32 Characteristic = 3; //玩家形象类型
+                required uint32 GOLD=4;//玩家持有的金币
+                required PLAYER_RANK RANK=5;//玩家的排位
+}
+message PLAYER_POS_INFO
+{
+	required uint32 PLAYER_ID = 1; //玩家ID
+	required VECTOR3 POS = 2;	//位置
+	required VECTOR3 ROT = 3;	//朝向
+}
+
+message PLAYER_READY_STATE
+{
+             
+                required PLAYER_STATE STATE=1; //玩家准备状态
+}
+
+message PLAYER_SHOOT_INFO
+{
+                required uint32 PLAYER_ID=1;  //玩家
+                required uint32 PLAYER_SHOOT=2;  //玩家投篮数
+                
+}
+
+message PLAYER_SCORE_INFO
+{
+                 required  uint32 PLAYER=1;  //玩家
+                 required uint32 PLAYER_SCORE=2;  //玩家得分
+}
+
+message BALL_INFO{
+               required VECTOR3 POS = 1;	//位置
+               required VECTOR3 DIRECTION = 2;  //力的方向大小
+}
+
+message GAME_INFO{
+                 
+                required uint32 PLAYER_ID = 1;   //玩家id
+                optional string PLAYER_NAME=2;
+                required uint32 PLAYER_SCORE=3;  //玩家得分
+                required uint32 PLAYER_ACCOUNT_CREDITS =4;    //玩家总积分
+                required uint32 PLAYER_GAME_CREDITS=5;    //游戏获得的积分
+                required uint32 PLAYER_ACCOUNT_GOLD=6;   //玩家已持有的金币
+                required uint32 PLAYER_GAME_GOLD=7;
+                required PLAYER_RANK RANK=8;
+}
+
+message STC_ENTER_BASKETBALL_MSG{
+                 
+                required ACTION_RESULT RESULT=1;
+                optional string INFO=2;
+}
+
+message CTS_CREATE_ROOM_MSG{
+
+                required uint32 PLAYER_AMOUNT=1; //房间人数
+}
+
+message STC_CREATE_ROOM_MSG{
+
+                 required ROOM_INFO CURRENT_ROOM_INFO=1;  //房间房间信息
+                 required ACTION_RESULT RESULT=2;  
+                 optional string  INFO = 3;            
+}
+
+message CTS_LEAVE_ROOM_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+}
+
+message STC_LEAVE_ROOM_MSG{
+
+                 required ACTION_RESULT RESULT=1;  
+                 optional string  INFO = 2;   
+               
+}
+
+message CTS_JOIN_ROOM_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+}
+
+message STC_JOIN_ROOM_MSG{
+              
+	required ACTION_RESULT RESULT= 1;
+	optional string  INFO = 2;       //结果信息
+}
+
+message CTS_READY_STATE_MSG{
+                required PLAYER_STATE STATE=1;
+}
+
+message STC_READY_STATE_MSG
+{
+                 repeated PLAYER_INFO LIST_PLAYER_INFO=1;
+}
+
+message CTS_KICK_PLAYER_MSG{
+                 required uint32 PLAYER_ID=1;  //玩家
+}
+
+message STC_KICK_PLAYER_MSG{
+               
+                required ACTION_RESULT RESULT= 1;  
+	optional string  INFO = 2;       //结果信息
+}
+
+message STC_KICK_NOTIFY_MSG
+{
+                required ACTION_RESULT RESULT= 1;  // 房间号
+	optional string  INFO = 2;       //结果信息
+}
+
+message CTS_ALL_READY_START_MSG{
+
+               required uint32 ROOM_ID=1;  //房主请求开始游戏
+}
+
+message STC_ALL_READY_START_MSG{
+                  
+                required ACTION_RESULT RESULT= 1;  // 结果
+	optional string  INFO = 2;       //结果信息
+}
+
+
+message STC_START_STATE_MSG{
+
+                required ACTION_RESULT RESULT= 1;  // 
+	optional string  INFO = 2;       //结果信息
+}
+
+message CTS_PLAYER_SHOOT_MSG{
+
+                required PLAYER_SHOOT_INFO SHOOT_INFO=1;  //玩家投篮数
+                required BALL_INFO PLAYER_BALL_INFO=2;
+}
+
+message STC_PLAYER_SHOOT_MSG{
+
+                 required PLAYER_SHOOT_INFO SHOOT_INFO=1; //玩家投篮数
+                 required BALL_INFO PLAYER_BALL_INFO=2;
+}
+
+message CTS_PLAYER_SCORE_MSG{
+
+                 required PLAYER_SCORE_INFO SCORE_INFO=1; //玩家得分
+}
+
+message STC_PLAYER_SCORE_MSG{
+
+               repeated PLAYER_SCORE_INFO LIST_SCORE_INFO=1; //玩家得分列表
+}
+
+
+message STC_GAME_OVER_MSG{
+
+                repeated GAME_INFO LIST_GAME_INFO=1;
+}
+
+message CTS_PLAYER_POS_MSG
+{
+                required PLAYER_POS_INFO PLAYER_POS_DATE=1;
+}
+
+message STC_PLAYER_POS_MSG
+{
+                repeated PLAYER_POS_INFO LIST_PLAYER_POS = 1;   //玩家位置信息列表
+}
+
+
+
+message STC_PLAYER_LIST_MSG{
+              
+               required uint32 ROOM_OWNER_ID=1;
+               repeated PLAYER_INFO LIST_PLAYER_INFO=2;//玩家列表
+               
+}
+
+
+
+message STC_ROOM_LIST_MSG {
+	repeated ROOM_INFO LIST_ROOM_INFO = 1;   //房间列表信息
+}
+
+message CTS_PLAYER_START_POS_MSG
+{
+                repeated VECTOR3 START_POS=1;
+}
+
+message STC_PLAYER_START_POS_MSG
+{
+               repeated VECTOR3 START_POS=1;
+}
+
+message STC_PLAYER_INFO_MSG
+{
+                required PLAYER_BASIC_INFO PLAYER_SELF=1;
+}
+
+message STC_EXIT_GAME_MSG
+{
+                 required ACTION_RESULT RESULT= 1;  // 
+	 optional string  INFO = 2;       //结果信息
+}
+;

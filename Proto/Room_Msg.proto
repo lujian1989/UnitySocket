@@ -1,0 +1,68 @@
+syntax = "proto2";
+package MANGO_ROOM_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.ourpalm.tank.message";
+option java_outer_classname = "MANGO_MSG";
+
+enum MSG_TYPE {
+    MSG_TYPE_ROOM = 2;
+};
+
+
+enum MSG_ID{
+    STC_PLAYER_CHANGE = 1;
+    CTS_JOIN = 2;
+    STC_JOIN = 3;
+    CTS_LEAVE = 4;
+};
+
+enum JOIN_RESULT
+{
+	SUCCESS = 1;
+	FAILED = 2;
+}
+
+enum ROOM_PLAYERCHANGE_STATE 
+{
+    JOIN = 1;                   //加入
+    LEAVE= 2;                  //离开
+    
+};
+
+message VECTOR3 
+{
+	required float X = 1;
+	required float Y = 2;
+	required float Z = 3;
+}
+
+message PLAYER_INFO
+{
+	required uint32 PLAYER_ID = 1;   //玩家ID
+	optional string PLAYER_NAME = 2;  //玩家名
+	required uint32 Characteristic = 3; //玩家形象类型
+}
+
+message PLAYER_CHANGE{
+	required PLAYER_INFO PLAYER = 1;   //玩家信息
+	required ROOM_PLAYERCHANGE_STATE STATE = 2; //加入或离开状态
+}
+
+message CTS_JOIN_ROOM{
+	required uint32 ROOM_ID = 1;  // 房间号
+}
+
+message CTS_LEAVE_ROOM{
+	required uint32 ROOM_ID = 1;  // 房间号
+}
+
+message STC_JOIN_ROOM{
+	required JOIN_RESULT RESULT= 1;  // 房间号
+	optional string  INFO = 2;//玩家信息
+}
+
+
+message STC_PLAYER_CHANGE_NOTIFY {
+	repeated PLAYER_CHANGE LIST_PLAYER_CHANGE = 1;   // 进入或离开玩家列表
+};

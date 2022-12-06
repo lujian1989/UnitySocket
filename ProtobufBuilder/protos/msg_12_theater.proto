@@ -1,0 +1,13 @@
+syntax = "proto2";
+package THRATER_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname ="THRATER_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_THRATER = 12;
+};
+
+
+

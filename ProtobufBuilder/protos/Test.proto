@@ -1,0 +1,14 @@
+syntax = "proto3";
+package NewProto;
+option java_package = "cn.eden.network.protocol.protobuf3";
+option java_outer_classname = "TestProto";
+
+message Request_Test_100_101{
+	string account=1;
+	string password=2;
+}
+message Response_Test_100_101{
+	string account=1;
+	string password=2;
+}
+

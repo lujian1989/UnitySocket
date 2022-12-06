@@ -1,0 +1,143 @@
+syntax = "proto2";
+package DeepEternity_Data;
+
+
+
+message Source_ID_Data
+{
+               required uint32 id=1;
+             
+};
+
+message Source_ID_State_Data
+{
+               required uint32 id=1;
+               required uint32 state = 2;
+};
+
+message Source_ID_Bool_Data
+{
+               required uint32 id=1;
+               required bool state = 2;
+};
+
+message VECTOR3
+{
+	required float float_X =1;
+	required float float_Y= 2;
+	required float float_Z= 3;
+};
+
+message DicInt
+{
+	repeated int32 key = 1;
+	repeated int32 value = 2;
+}
+
+message Weapon
+{
+	required int32 weaponType = 1;	//武器类型
+	required int32 subType = 2;		//武器子类型
+	required int32 quantity = 3;		//武器数量(子弹，使用次数)
+}
+
+message WeaponList			//持有武器列表
+{
+	repeated Weapon listWeaponSpot = 1;
+}
+
+message DE_Monster_Info{
+
+				required int32 Id=1;              		//唯一标识
+				required string name=2;             	//名称
+				required int32 spawnTimes=3;           	//波数
+				required int32 type=4;             		//形象
+				required int32 attackSpeed=5;        	//攻击速度
+				required float attackInterval=6;     	//攻击频率
+				required int32 damage=7;             	//伤害
+				required float moveSpeed=8;          	//移动速度
+				required int32 hp=9;                 	//生命
+				required int32 score=10;              	//分数
+				required int32 dispearedTime=11;      	//死亡消失时间
+				required float attackDistance=12;     	//攻击距离
+				required int32 itemType=13;       	//掉落物品的大类
+				required int32 subItemType=14;    	//掉落物品的子类
+				required int32 quantity=15;        	//数量
+				required VECTOR3 startPos = 16;	//出生位置
+				required int32 playerId = 17;		//玩家id
+				required string items = 18;		//掉落列表
+				required VECTOR3 patrolpos1= 19;	//巡逻点1
+				required VECTOR3 patrolpos2= 20;	//巡逻点2
+				required VECTOR3 patrolpos3= 21;	//巡逻点3
+};
+
+
+message SpawnDE_Monster_MSG{
+
+                required DE_Monster_Info monsterInfo=1; 	//生成怪物的属性				
+};
+
+message Damage_Info//怪物受伤消息
+{
+	required int32 Id=1;              		//唯一标识
+	required int32 damage = 2;             	//伤害
+	required int32 gunType= 3;           	//枪支类型
+	required int32 playerId = 4;             	//玩家ID
+}
+
+message EquipWeapon_Info
+{
+	required int32 playerId = 1;
+	required int32 spot = 2;              		//槽位
+	required int32 weaponType = 3;             	//武器类型
+	required int32 subType= 4;           	//子类型
+	required int32 level = 5;             	//等级
+}
+
+message DE_MonsterDie_Info
+{
+	required int32 Id=1;              		//唯一标识
+	required int32 playerId=2;            	//玩家ID
+	required int32 gunType=3;           	//枪支类型
+    	required string items = 4;		//掉落列表
+    	required int32 quantity=5;            	//数量
+}
+
+message PlayerDamage_Info//玩家受伤消息
+{
+	required int32 playerId=1;              //玩家ID
+	required int32 damage = 2;             	//伤害
+	required int32 monsterId = 3;            //造成伤害的僵尸ID
+}
+
+
+message SpawnDE_MonsterNum		//同步当前波次的僵尸数量
+{
+	required int32 waves=1;              //波次
+	required int32 num=2;              //数量
+}
+
+message DE_SpawnInfo //房间刷怪
+{
+	required int32 roomid=1; 	//房间号
+	required int32 cellOutside=2;	//门外Cell 如果Roomid=1 CellA=roomID 起始房间
+	required int32 cellInside=3;	//门内Cell 一般是roomid 但如果是两张地图连接处 cellB会和roomid不一致
+}
+
+
+message CellEnemyInfo
+{
+	required int32 cellId=1;		//房间号
+	required int32 refreshCount=2;		//刷新次数
+	required int32 leftEnemies=3;		//剩余怪数
+}
+
+message CellEnemyList
+{
+	repeated CellEnemyInfo listCellEnemyInfo=1;	//房间刷怪记录
+}
+
+
+
+
+

@@ -1,0 +1,561 @@
+syntax = "proto2";
+package HardCordGirl_Data;
+
+message PropsPickUp_Info//道具被捡起消息
+{
+	required int32 Id       = 1;            //道具唯一标识
+	required int32 playerId = 2;            //道具拥有者
+	
+}
+
+message PropUse_Info //道具使用
+{
+	required int32 Id           = 1;
+	required int32 playerId     = 2;
+	required BALL_INFO ballInfo = 3; //投篮信息
+}
+
+message PropDiscard_Info //道具丢弃
+{
+	required int32 Id = 1;
+	required int32 playerId = 2;
+}
+
+message PropStateChange_Info //道具状态变更
+{
+	required int32 Id         = 1;
+	required int32 oldState   = 2;
+	required int32 newState = 3;
+	required int32 owerId     = 4;  //拥有者
+	required VECTOR3 pos      = 5;	//位置
+}
+
+message VECTOR3
+{
+    required float X = 1;
+    required float Y = 2;
+    required float Z = 3;
+}
+
+message VECTOR4
+{
+    required float X = 1;
+    required float Y = 2;
+    required float Z = 3;
+    required float W = 4;
+}
+
+message BALL_INFO{
+    required VECTOR3 POS = 1;	//位置
+	required VECTOR3 DIRECTION = 2;  //力的方向大小
+	required VECTOR3 ROT = 3;	//旋转
+	required VECTOR3 Torque =4;
+}
+
+message PropConsole_Info //控制台信息
+{
+	required int32 type = 1;		//类型（0：氛围，1：灯光，2：音效，3表示分组事件，4推直流）
+	required int32 eventNum = 2;   //事件编号（-1：清空，0~n表示相关事件）
+	required int32 eventState =3; //事件状态，表示点击按钮后产生的状态信息
+}
+
+message PropSound_Info //声音信息
+{
+	required float media = 1;
+	required float microphone = 2;
+	required float prop = 3;
+}
+
+message PlayerKeyWord  //每个玩家对应关键词
+{
+	required int32 Id = 1;
+	required string keyWord = 2;
+}
+
+
+message PlayerKeyWordId  //每个玩家对应关键词Id
+{
+	required int32 Id = 1;
+	required int32 errorTimes = 2;
+	repeated int32 keyWordId = 3;
+}
+
+
+message PlayerKeyWordInfo  //害你在心口难开游戏信息
+{
+	required bool isInGame = 1;
+	optional PlayerKeyWordId playerInfo = 2;
+}
+
+message PlayerKeyWordInfo_List {   	//害你在心口难开 每个玩家的关键字和Id对应
+	repeated PlayerKeyWordInfo playerKeyWordInfos = 1;  
+}
+
+
+message INSIDEMAN_IDENTITY__NOTIFY {   //谁是卧底身份
+	required bool isEndGame                     = 1; //是否结束游戏
+	repeated PlayerKeyWord PLAYER_IDENTITY_LIST = 2;  
+}
+
+message InsideMan_SelectPlayer {   //主持人选中玩家参与谁是卧底游戏
+	required int32 playerId =1;
+
+}
+message PlayerIdentityList {   //玩家身份列表（ID与身份一一对应）
+	repeated int32 id = 1; //ID
+	repeated int32 identity = 2;  //身份 0 表示无 1表示红队 2表示蓝队
+};
+
+
+message PlayerLevelInfo{	//玩家等级更新
+	required int32 userId = 1; //玩家ID
+	required int32 level = 2; //玩家等级
+};
+
+
+message PlayerOrganizePosData {   //玩家组队位置同步
+	required int32 id = 1; //ID
+	required VECTOR3 pos = 2; //玩家位置
+};
+
+message AnswerInfo {
+	required int32 answerType = 1; // 0 ：直接显示 1：加载图片显示
+	required string answer = 2; //答案
+	required bool isCorrect = 3; //是否是正确答案
+};
+
+
+message GuLu_Answer_QA {
+	required string question = 1; 		// 问题
+	required int32 qId = 2;				//问题id
+	required int32 round = 3;			//轮次数
+	repeated AnswerInfo answerList = 4; // 答案列表
+};
+
+
+message GuLu_Memory_QA {
+	required int32 round = 1; 			//轮次数
+	required int32 picType = 2; 		//抽取图片类型
+	repeated int32 pics = 3;			//抽取的图片编号
+	repeated int32 hexagons = 4; 		//抽取的六边形编号
+};
+
+message GuLu_ChangeScene_Info {
+	required bool isBack = 1;			//进入或者退出
+	required int32 sceneId = 2; 		//场景id
+	required int32 roomId = 3; 			//房间id
+};
+
+message GuLu_PlayerOut_Info {
+	required int32 playerId = 1; 		//玩家id
+	required int32 outRound = 2; 		//淘汰轮次
+};
+
+message GuLu_PlayerBlackScreen_Info {
+	required int32 playerId = 1; 		//玩家id
+	required bool isBlackScreen = 2; 	//玩家是否黑屏
+	required int32 safePosId = 3; 		//安全位置ID
+};
+
+
+message GuLu_Player_SpawnPosIndex {
+	repeated uint32 playerId = 1; 		//玩家id
+	repeated int32 posIndex = 2; 		//生成位置
+};
+
+message GuLu_MiniGameStart_Info {
+	required int32 playerId = 1; 							//发送消息的主持人id
+	required int32 gameType = 2; 							//游戏类型
+	required int32 gameTheme = 3; 							//游戏主题
+	required bool sceneLoad = 4;							//游戏场景是否已经加载
+	required int32 gameIndex = 5;							//游玩游戏次数
+	required int32 curGameIndex = 6;						//游戏类型编号
+	optional GuLu_Player_SpawnPosIndex playerPosList = 7;	//玩家生成位置列表
+};
+
+message GuLu_MiniGameEnd_Info {
+	required int32 playerId = 1; 		//发送消息的玩家id
+	required int32 endRound = 2; 		//结束游戏轮次
+	required bool needBack = 3;			//是否需要返回街道
+	optional int32 winTeam = 4;			//获胜队伍
+};
+
+message GuLu_Bomb_Info {
+	required int32 bombType = 1; 		//炸弹种类
+	required float bombSapwnTime = 2; 	//炸弹生成时间
+	required int32 bombSapwnPos = 3; 	//炸弹生成位置
+};
+
+message GuLu_BombSpawn_Info {
+	required int32 round = 1; 			//轮次数
+	repeated GuLu_Bomb_Info bombs = 2; 	//炸弹生成属性
+};
+
+message GuLu_BumperCar_HitPlayer_Info { 
+	required int32 id = 1; 				//碰撞到的玩家id
+	required VECTOR3 pos = 2; 			//玩家位置
+};
+
+message GuLu_BumperCar_ShakingArea_Info { 
+	required int32 round = 1; 			//轮次数
+	required int32 shakingTime = 2; 	//区域震动时间	
+};
+
+message GuLu_BumperCar_PlayEngineSound_Info { 
+	required int32 id = 1; 				//碰撞到的玩家id
+	required float pitchValue = 2; 		//播放声音频率
+};
+
+message GuLu_BNB_PlayerSpawnBomb_Info {
+	required int32 x = 1; 				//生成位置X
+	required int32 z = 2; 				//生成位置Z
+	required int32 bombLength = 3; 		//炸弹范围
+	required uint32 playerId = 4; 		//生成的玩家ID
+};
+
+message GuLu_SnowBall_Hit {
+	required int32 playerId = 1; 			//被击中玩家ID
+	required int32 type = 2; 	            //击中道具类型
+	required VECTOR3 HitPos = 3;            //击中位置
+};
+
+message Data_ID_Data{
+	required uint32 id=1;
+};
+
+message PlayerOnHit_Info{			//玩家受击信息
+	required uint32 onHitPlayerId = 1;	//受击玩家id
+	required int32 damage=2;		//伤害值
+	required uint32 attackPlayerId=3;	//攻击方玩家id
+	required int32 bulletColor=4;   		//子弹颜色
+};
+
+message Data_ID_Bool_Data{
+	required uint32 id =1;
+	required bool state =2;			//状态
+};
+
+message GuLu_ChangeSubScene_Info {
+	required int32 sceneId = 1; 		//场景id
+	required int32 roomId = 2; 		//房间id
+	required int32 mapId = 3; 		//地图id
+	required int32 timeTick = 4;		//时间tick
+	required int32 waves = 5;		//波次
+};
+message PopCapBeadData{	//祖玛小球同步类型
+	required uint32 id=1;			//玩家id
+	required int32 beadType =2;	//小球类型
+	required VECTOR3 beadPos =3;	//小球位置
+	required QUATEENION beadRot =4;	//小球旋转
+};
+
+
+message QUATEENION
+{
+    required float X = 1;
+    required float Y = 2;
+    required float Z = 3;
+	required float w = 4;
+}
+
+
+message PopCapBeadTriggerData{//祖玛小球碰撞信息
+	//玩家信息
+	required uint32 id =1;	//小球所属玩家
+	required int32 listId = 2;//小球列表id
+	required int32 triggerLinkID = 3;//碰撞小球链表ID
+	required int32 triggerBeadID = 4;//碰撞小球ID
+}
+
+message PopCapBeadUnitData{//祖玛小球分队数据
+	//玩家信息
+	required int32 availableBeadType =1;	//小球分队情况
+	repeated int32 listPlayerID =2;			//玩家顺序ID
+}
+
+
+message PopCapGameOverData{//祖玛小球游戏结束同步
+	//玩家信息
+	required int32 overTemp =1;	//被淘汰小组
+
+}
+
+message PopCapBeadTriggerData_Fly{//祖玛小球飞行碰撞信息
+	//玩家信息
+	required uint32 id = 1;	//小球所属玩家
+	required int32 listId = 2;//小球列表id
+	required uint32 triggerId = 3;	//碰撞小球所属玩家
+	required int32 triggerListId = 4;//碰撞小球列表id
+}
+
+message GuLu_CS_ENTER {
+	required uint32 playerId = 1;	    //
+	required bool isOpen = 2; 			//CS开启/关闭
+	
+};
+
+
+message GuLu_Dice {
+	 required VECTOR3 POS = 1;	//位置
+	 required VECTOR3 ROT = 2;	//旋转
+	 
+	 required VECTOR3 DIRECTION = 3;  //力的方向大小
+	 required VECTOR3 Torque =4;
+	
+};
+
+message GuLu_DANCE_INFO {
+	 required uint32 danceId = 1;	//舞蹈ID
+	 required bool  isDance = 2;	//舞蹈开关
+	
+};
+
+
+message TrackerData
+{
+	required int32 playerId=1;
+	
+	required VECTOR3 headPos=2;             
+	required VECTOR3 hipPos=3;               
+	required VECTOR3 lhPos=4;                
+	required VECTOR3 rhPos=5;             
+	required VECTOR3 llPos=6;             
+	required VECTOR3 rlPos=7;  
+			 
+	required VECTOR4 headRot=8;             
+	required VECTOR4 hipRot=9;               
+	required VECTOR4 lhRot=10;                
+	required VECTOR4 rhRot=11;             
+	required VECTOR4 llRot=12;             
+	required VECTOR4 rlRot=13;    
+	
+	required int32 protoType=14;    	
+}
+
+message ModelScaleData	
+{
+	required int32 playerId=1;
+	
+	required VECTOR3 highScale =2;  
+	required VECTOR3 armScale =3;   	
+}
+
+
+message SpawnBubbleData		
+{
+	required int32 type=1;
+	required int32 playerId=2;
+	repeated BubbleData bDataList = 3;
+}
+
+message BubbleData		
+{
+	required int32 playerId=1;
+	required string bubbleId = 2;
+	required float rdmX = 3;
+	required float rdmY = 4;
+	required float rdmZ = 5;
+	required int32 colorIndex = 6;
+}
+
+message BreakBubbleData		
+{
+	required string bubbleId = 1;
+	required int32 soundId = 2;
+	required int32 type = 3;
+}
+
+message SpawnRibbonData		
+{
+	required int32 type=1;
+	required int32 playerId=2;
+	repeated RibbonData bDataList = 3;
+}
+
+message RibbonData		
+{
+	required int32 playerId=1;
+	required string ribbonId = 2;
+	required float rdmX = 3;
+	required float rdmY = 4;
+	required float rdmZ = 5;
+	required int32 colorIndex = 6;
+}
+
+message FininshRibbonPathData		
+{
+	required string ribbonId = 1;
+	required int32 soundId = 2;
+	required int32 type = 3;
+}
+
+message DanceCmdData		
+{
+	required string name = 1;
+	required int32 cmd = 2;
+	required string animationName = 3;
+	required string videoPath = 4;
+}
+
+message WavingStickData		
+{
+	required int32 playerId=1;
+	required int32 handId = 2;
+	required int32 colorIndex = 3;
+	
+}
+
+message CtrlFullBodyPlayerData		
+{
+	required int32 sendPlayerId = 1;
+	required int32 fullBodyPlayerId = 2;
+	required int32 appearedState = 3;
+	
+}
+
+message FullBodyPlayerActionData		
+{
+	required int32 sendPlayerId = 1;
+	required int32 fullBodyPlayerId = 2;
+	required int32 actionType = 3;
+	
+}
+
+message PlayerActionData		
+{
+	required int32 sendPlayerId = 1;
+	required int32 actionType = 2;
+	
+}
+
+
+message GunOwnerData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+}
+
+message GunPosData		
+{
+	required int32 gunType = 1;
+	required int32 curBullets = 2;
+	required VECTOR3 pos = 3;
+	required VECTOR3 euler = 4;
+}
+
+message SpawnGunData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+	repeated int32 objIds = 3;
+	required int32 gunType = 4;
+	required bool isBound = 5;
+	required bool isUnlimited = 6;
+	
+}
+
+message GrabGunData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+	required int32 gunId = 3;
+	required int32 gunModule = 4;
+}
+
+message UnGrabGunData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+	required int32 gunId = 3;
+	required int32 gunModule = 4;
+	required VECTOR3 velocity = 5;
+	required VECTOR3 angular = 6;
+}
+
+message UseGunData		
+{
+	required int32 gunId = 1;
+	required int32 curBullet = 2;
+}
+
+message SpawnMagazineData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+	required int32 gunType = 3;
+	
+}
+
+message LoadMagazineData		
+{
+	required int32 playerId = 1;
+	required int32 handType = 2;
+	required int32 gunId = 3;
+	
+}
+
+message PlayerGetDamageData		
+{
+	required int32 attackPlayerId = 1;
+	required int32 getDamagePlayerId = 2;
+	required int32 damage = 3;
+	required int32 gunType = 4;
+	required VECTOR3 localPos = 5;
+	required VECTOR3 hitNormal = 6;
+	
+}
+
+message PlayerDeadData		
+{
+	required int32 attackPlayerId = 1;
+	required int32 deadPlayerId = 2;
+	
+}
+
+
+message ChangeRoomStatusData		
+{
+	required int32 playerId = 1;
+	required int32 roomStauts = 2;
+}
+
+message TAFootStepSoundData		
+{
+	required int32 playerId = 1;
+	required int32 soundId = 2;
+}
+
+message ChangeTheaterLightEffectData		
+{
+	required string lightEffectType = 1;
+	required bool isOpen = 2;
+}
+
+
+message KtvSongStartData		
+{
+	required int32 playerId = 1;
+	required string songId = 2;
+	required bool hasAccompaniment = 3;
+	required int64 songTotalDuration = 4;
+	required string pullStreamId = 5;
+	required string songName = 6;
+	required string originalSinger = 7;
+	required string shareToken = 8;
+	required string playerName = 9;
+	required int32 characteristic = 10;
+}
+
+message KtvSongChorusData		
+{
+	required int32 playerId = 1;
+	required string songId = 2;
+	required int64 delayTime = 3;
+
+}
+
+message TutorialInfo
+{
+	repeated int32 stageIndex = 1;
+	repeated int32 tutorialState = 2;
+}

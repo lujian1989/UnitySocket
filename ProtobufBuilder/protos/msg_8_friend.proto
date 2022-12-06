@@ -1,0 +1,202 @@
+syntax = "proto2";
+package FRIEND_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "FRIEND_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_FRIEND = 8;
+};
+
+enum CMD_ID{
+    CTS_FRIEND_LIST      = 1; //请求好友列表（空消息）
+    STC_FRIEND_LIST      = 2; //返回好友列表
+   
+	CTS_FRIEND_APPLY	 = 3; //请求添加好友申请
+	STC_FRIEND_APPLY	 = 4; //返回添加好友申请
+	
+	CTS_FRIEND_CONFIRM   = 5; //接受好友请求
+	STC_FRIEND_CONFIRM   = 6; //返回好友请求
+	
+	
+	CTS_FRIEND_DELETE	 = 7;  //请求删除好友
+	STC_FRIEND_DELETE 	 = 8; //返回删除好友
+	
+	CTS_FRIEND_BLACK	 = 9;  //请求拉黑好友
+	STC_FRIEND_BLACK 	 = 10; //返回拉黑好友
+	
+	CTS_FRIEND_REMOVE_BLACK = 11;//解除拉黑
+	STC_FRIEND_REMOVE_BLACK = 12;   //解除拉黑返回
+	
+	CTS_FRIEND_MASK	     = 13; //请求屏蔽好友
+	STC_FRIEND_MASK 	 = 14; //返回屏蔽好友
+	
+	CTS_FRIEND_UNMASK	 = 15; //请求解除屏蔽好友
+	STC_FRIEND_UNMASK 	 = 16; //返回请求解除屏蔽好友
+	
+	STC_FRIEND_PUSH_NOTIFY = 17; //好友列表更新推送（服务器主推消息）
+	
+	CTS_ROLE_INFO = 18;
+	STC_ROLE_INFO = 19;
+	
+	CTS_FRIEND_AGREE_ALL   = 20;  //同意全部好友请求
+	STC_FRIEND_AGREE_ALL   = 21;
+	
+	CTS_FRIEND_REFUSE_ALL  = 22;
+	STC_FRIEND_REFUSE_ALL  = 23;
+	
+	CTS_FRIEND_SEARCH = 24; //好友搜索
+	STC_FRIEND_SEARCH = 25;
+
+};
+enum NOTIFY_TYPE
+{
+    FRIEND_APPLY = 0;       //好友申请
+	ADD_FRIEND   = 1;       //被添加成功
+    DELETE_FRIEND= 2;       //删除
+    BLACK_FRIEND = 3;       //拉黑
+    FRIEND_ONLINE = 4;      //好友上线
+    FRIEND_OFFLINE = 5;   	//好友下线
+  
+};
+
+enum RESULT_TYPE
+{
+    SUCCESS   = 1;       //成功
+    FAIL      = 2;       //失败
+
+};
+enum RELATION_TYPE
+{
+	COMMON =0;     //普通关系
+	MASK = 1;      //屏蔽关系
+	BLACKLIST = 2; //拉黑关系
+	FRIEND = 3;    //好友
+}
+
+//好友信息
+message FriendInfo {
+	required uint32 roleId 	       = 1;	     //玩家id
+	required string name 	       = 2;	     //名称
+	required uint32 Characteristic = 3;     //玩家形象
+	required RELATION_TYPE relation       = 4;      //1屏蔽，2拉黑，3好友
+	required uint64 offLineTime    = 5;      //离线时间（秒）0表示当前在线
+}
+
+
+message STC_FRIEND_LIST_MSG {
+	repeated FriendInfo friendsList   = 1;	//好友关系列表（包括好友，拉黑，屏蔽）
+	repeated FriendInfo applyList     = 2;  //好友申请列表
+}
+
+//好友申请
+message CTS_FRIEND_APPLY_MSG {
+	required uint32 roleId  = 1;		//要添加的好友id
+}	
+message STC_FRIEND_APPLY_MSG {
+	required RESULT_TYPE success = 1;	//返回好友信息是否发送成功
+}
+
+//同意或拒绝添加好友
+message CTS_FRIEND_CONFIRM_MSG {
+	required uint32 roleId  = 1;
+	required RESULT_TYPE isAgree = 2;       //1是接受，2是拒绝
+}
+message STC_FRIEND_CONFIRM_MSG {
+	required uint32 roleId 	= 1;
+	required RESULT_TYPE isAgree = 2;       //1是接受，2是拒绝
+}
+
+//好友删除
+message CTS_FRIEND_DELETE_MSG {
+	required uint32 roleId = 1;		//要删除的好友id
+}	
+message STC_FRIEND_DELETE_MSG {
+	required uint32 roleId      = 1;
+	required RESULT_TYPE success 	= 2;	//删除是否成功
+}	
+
+//拉黑玩家
+message CTS_FRIEND_BLACK_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_BLACK_MSG {
+	required FriendInfo info 	= 1;
+	required RESULT_TYPE success 	= 2;	//是否拉黑成功
+}
+
+message CTS_FRIEND_REMOVE_BLACK_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_REMOVE_BLACK_MSG {
+	required uint32 roleId = 1;
+	required RESULT_TYPE success 	= 2; //是否解除成功
+}
+
+
+//屏蔽玩家
+message CTS_FRIEND_MASK_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_MASK_MSG {
+	required uint32 roleId = 1;
+	required RESULT_TYPE success 	= 2;	//是否屏蔽成功
+}
+//解除屏蔽
+message CTS_FRIEND_UNMASK_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_UNMASK_MSG {
+	required uint32 roleId = 1;
+	required RESULT_TYPE success 	= 2; //是否解除成功
+}
+
+//接受全部好友申请
+message CTS_FRIEND_AGREE_ALL_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_AGREE_ALL_MSG {
+	required RESULT_TYPE success 	= 1; //是否全部接受成功
+}
+//拒绝全部好友申请
+message CTS_FRIEND_REFUSE_ALL_MSG {
+	required uint32 roleId = 1;
+}
+message STC_FRIEND_REFUSE_ALL_MSG {
+	required RESULT_TYPE success 	= 1;  //是否全部拒绝成功
+}
+
+
+//玩家单个好友列表更新推送
+message STC_FRIEND_PUSH_NOTIFY_MSG {
+	required FriendInfo friendInfo = 1; 
+	required NOTIFY_TYPE type      = 2; // 1是被添加；2是被删除;3被拉黑 ,4 好友上线，5 好友离线
+}
+
+//查看其它玩家信息
+message CTS_ROLE_INFO_MSG {
+	required uint32 roleId = 1;
+}
+message STC_ROLE_INFO_MSG {
+	required uint32 roleId 	       = 1;	     //玩家id
+	required string name 	       = 2;	     //名称
+	required uint32 Characteristic = 3;     //玩家形象
+	required string sign           = 4;     //玩家签名
+	required string home 		   = 5;	    //玩家家族
+	required string job            = 6;     //玩家职位
+}
+//好友搜索
+message CTS_FRIEND_SEARCH_MSG {
+	required string idstr = 1;
+}
+
+//好友搜索
+message STC_FRIEND_SEARCH_MSG {
+    required RESULT_TYPE RESULT= 1;
+    optional string  INFO = 2;       //结果信息
+	optional FriendInfo friendsInfo   = 3;
+}
+
+
+

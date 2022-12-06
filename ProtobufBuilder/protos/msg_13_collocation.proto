@@ -1,0 +1,49 @@
+syntax = "proto2";
+package COLLOCATION_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "COLLOCATION_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_COLLOCATION = 13;
+};
+
+
+enum CMD_ID{
+    CTS_TRIAL = 1;
+    STC_TRIAL = 2;
+    CTS_SYNC = 3;
+    STC_SYNC =4;
+};
+
+
+	       
+
+
+message CTS_TRIAL_MSG
+{
+	required uint32 EVENT_TYPE = 1;	//抢占类事件类型
+	required uint32 EVENT_ID = 2;		//事件ID
+	optional bytes EVENT_DATA = 3;	//事件数据
+}
+
+message STC_TRIAL_MSG
+{
+	required uint32 EVENT_TYPE = 1;	//事件类型
+	required uint32 EVENT_ID = 2;		//事件ID
+	optional bytes EVENT_DATA = 3;	//事件数据
+}
+
+message CTS_SYNC_MSG
+{
+	required uint32 EVENT_TYPE = 1;	//同步类事件类型
+	optional bytes EVENT_DATA = 3;	//事件数据
+}
+
+message  STC_SYNC_MSG
+{
+	required uint32 EVENT_TYPE = 1;	//同步类事件类型
+	optional bytes EVENT_DATA = 3;	//事件数据
+}
+

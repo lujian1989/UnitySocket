@@ -1,0 +1,107 @@
+syntax = "proto2";
+package ROOM_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "ROOM_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_ROOM = 4;
+};
+
+
+enum CMD_ID{
+    STC_PLAYER_CHANGE_NOTIFY = 1;
+    CTS_JOIN= 2;
+    STC_JOIN = 3;
+    CTS_LEAVE = 4;
+    STC_PLAYER_POS_CHANGE_NOTIFY = 101;
+    CTS_PLAYER_POS = 102;
+    STC_JOIN_READY = 7;
+    CTS_JOIN_READY = 8;
+};
+
+enum JOIN_RESULT
+{
+	SUCCESS = 1;
+	FAILED = 2;
+};
+
+enum ROOM_PLAYERCHANGE_STATE 
+{
+    JOIN = 1;                   //加入
+    LEAVE= 2;                  //离开
+    
+};
+
+message VECTOR3 
+{
+	required float X = 1;
+	required float Y = 2;
+	required float Z = 3;
+}
+
+message PLAYER_POS_INFO
+{
+	required uint32 PLAYER_ID = 1; //玩家ID
+	required VECTOR3 POS = 2;	//位置
+	required VECTOR3 ROT = 3;	//朝向
+                required VECTOR3 HAND_POS=4; //手的位置
+                required VECTOR3 HAND_ROT=5; //手的方向
+}
+
+message PLAYER_INFO
+{
+	required uint32 PLAYER_ID = 1;   //玩家ID
+	optional string PLAYER_NAME = 2;  //玩家名
+	required uint32 Characteristic = 3; //玩家形象类型
+}
+
+message PLAYER_CHANGE{
+	required PLAYER_INFO PLAYER = 1;   //玩家信息
+	required ROOM_PLAYERCHANGE_STATE STATE = 2; //加入或离开状态
+}
+
+message CTS_LEAVE_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+                required uint32 STAGE_TYPE=2;
+}
+
+message CTS_JOIN_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+                required uint32 STAGE_TYPE=2;//房间类型
+}
+
+message STC_JOIN_MSG{
+	required JOIN_RESULT RESULT= 1;  // 房间号
+	optional string  INFO = 2;       //结果信息
+                required uint32 STAGE_TYPE=3;//房间类型
+}
+
+message CTS_PLAYER_POS_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+	required VECTOR3 POS = 2;	//位置
+	required VECTOR3 ROT = 3;	//朝向
+                required VECTOR3 HAND_POS=4;  //手的位置
+                required VECTOR3 HAND_ROT=5; //手的方向
+                required uint32 STAGE_TYPE=6;
+}
+
+message CTS_JOIN_READY_MSG{
+	required uint32 ROOM_ID = 1;  // 房间号
+                required uint32 STAGE_TYPE=2;
+}
+
+message STC_JOIN_READY_MSG{
+	required JOIN_RESULT RESULT= 1;  // 房间号
+	optional string  INFO = 2;       //结果信息
+}
+
+message STC_PLAYER_POS_CHANGE_NOTIFY_MSG{
+	repeated PLAYER_POS_INFO LIST_PLAYER_POS = 1;   //玩家位置信息列表
+}
+
+
+message STC_PLAYER_CHANGE_NOTIFY_MSG {
+	repeated PLAYER_CHANGE LIST_PLAYER_CHANGE = 1;   // 进入或离开玩家列表
+};

@@ -1,0 +1,74 @@
+syntax = "proto3";
+package NewProto;
+message Requset_TESTAAA_INFO_12_13
+{
+	
+	
+	string keyWord22 = 1;
+	
+}
+message Respone_TESTdsds_INFO_12_14
+{
+	
+	
+	string keyWord23332 = 1;
+	
+}
+
+message Respone_TEST_SS_12_15
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+
+message Respone_TEST_SSA_12_16
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+
+message Respone_TEST_SSADDD_12_17
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_SSADSDD_12_18
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_SSADSDddd_12_19
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_SSADSDdAS_12_20
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_SSADSDdASGF_12_21
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_dfF_12_22
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_dddfF_12_23
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Respone_TEST_dddfdasdF_12_24
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}
+message Requset_TEST_dddfdasdF_12_25
+{
+	string keyWord = 1;
+	string keyWord23332 = 2;	
+}

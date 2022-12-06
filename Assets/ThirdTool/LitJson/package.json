@@ -1,0 +1,17 @@
+{
+    "name" : "holybomb.unity.litjson",
+    "version" : "0.16.0",
+    "displayName" : "LitJSON",
+    "description" : "A fork of LitJSON compatible with the Unity Package Manager. The original library: https://litjson.net/",
+    "unity"       : "2019.2",
+    "unityRelease" : "",
+    "dependencies" : {
+    },
+    "keywords"     : [
+    ],
+    "author"       : {
+        "name" : "holybomb",
+        "email" : "holybomb@163.com",
+        "url"   : "https://github.com/holybomb/LitJson-CSharp"
+    }
+}

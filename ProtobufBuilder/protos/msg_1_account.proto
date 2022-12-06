@@ -1,0 +1,77 @@
+syntax = "proto2";
+package ACCOUNT_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "ACCOUNT_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_ACCOUNT = 1;
+};
+
+enum CMD_ID{
+    CTS_PASSWORD_LOGIN = 1;
+    STC_LOGIN = 2;
+    CTS_GUEST_LOGIN = 3;
+    CTS_REGIST = 4;
+    STC_REGIST = 5;
+    CTS_REGIST_IDENTITY = 6;	
+    STC_REGIST_IDENTITY = 7;
+    CTS_RESET_PASSWORD = 8;
+};
+
+enum LOGIN_STATE
+{
+    PASSWORD_LOGIN_SUCCESS = 1;                   //账号密码登录成功
+    GUEST_LOGIN_SUCCESS = 2;		//游客登录成功
+    RESET_LOGIN_SUCCESS =3;			//重置密码登陆成功
+    FAILURE = 4;                   //失败
+    
+};
+
+
+message CTS_PASSWORD_LOGIN_MSG{
+	required string username	=1;
+	required string password	=2;
+}
+
+message STC_LOGIN_MSG{
+	required LOGIN_STATE state	=1;//登录结果
+	optional string info = 2;
+	optional string token = 3;
+	optional bytes iv = 4;
+	optional bytes key = 5;
+	optional uint32 id = 6;
+	optional string address = 7;
+	optional uint32 port = 8;
+}
+
+message CTS_REGIST_MSG
+{
+	required string userName = 1;
+	required string password = 2;
+	required string identityCode = 3;
+}
+
+message STC_REGIST_MSG
+{
+	required uint32 state = 1;
+	optional string info = 2;		
+}
+
+message STC_REGIST_IDENTITY_MSG
+{
+	required string identityCode = 1;
+}
+
+message CTS_REGIST_IDENTITY_MSG
+{
+	required string telephone = 1; //电话号码
+}
+
+message CTS_RESET_PASSWORD_MSG
+{
+	required string userName = 1;
+	required string password = 2;
+	required string identityCode = 3;
+}

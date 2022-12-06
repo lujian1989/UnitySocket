@@ -1,0 +1,114 @@
+syntax = "proto2";
+package LOCKSTEP_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "LOCKSTEP_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_LOCKSTEP = 100;
+};
+
+enum CMD_ID{
+    CTS_LOGIN_ROOM      = 1;  //进入帧同步房间 String token
+	STC_LOGIN_ROOM      = 2;  //开始游戏 int status String err\
+	CTS_READY_ROOM      = 3;  //   空消息
+	STC_READY_ROOM      = 4;  //开始游戏 int status String err\
+
+	STC_PLAYERCHANGER_NOTITY_ROOM    = 5;  // 玩家列表[｛int id,byte ｝,{}]
+	STC_START_NOTIFY_ROOM    		 = 6;  // 服务器开始启动  帧同步的频率，延时，
+
+	CTS_KEYEVENT_ROOM           =7;   //bytes keyevent
+	STC_KEYEVENT_NOTIFY_ROOM    =8; //[{int frame,int id, bytes keyvent},{.....}
+
+	CTS_GETKEYEVENT_ROOM   		=9; //用于丢包获取帧信息
+	STC_GETKEYEVENT_ROOM   		=10; //重发指定的帧信息
+
+	CTS_REJOIN_ROOM   	   		=11; //重新加入房间，
+	STC_REJOIN_ROOM        		=12; //重发从0帧开始的所有帧信息
+
+	CTS_GAMEOVER_ROOM     		=13; //退出游戏
+	STC_GAMEOVER_ROOM           =14; 
+};
+
+enum RESPONSE_RESULT{
+	success = 1;
+	fail    = 2;
+}
+
+
+//玩家信息
+message PlayerServerInfo {
+	required uint32 roleId 	       = 1;	     //玩家id
+	required RESPONSE_RESULT status         = 2;  //玩家状态
+	//其他信息请根据需求扩充
+	required uint32 prefabId       = 3;      //玩家形象预设
+}
+
+message TickInput{
+	required uint32 roleId      =2;
+	required bytes keyevent     =3;
+}
+
+//服务器帧数据(包含多帧数据)
+message FrameInput{
+	required uint32 tick           =1;
+	repeated TickInput inputs      =2;
+}
+
+message CTS_LOGIN_ROOM_MSG {
+	required uint32 roleId  = 1;
+	required string token   = 2;
+}
+
+message STC_LOGIN_ROOM_MSG {
+	required RESPONSE_RESULT result  = 1;
+	required string info  = 2;
+}
+
+message CTS_READY_ROOM_MSG {
+	
+}
+
+message STC_READY_ROOM_MSG {
+	required RESPONSE_RESULT result  = 1;
+	required string info  = 2;
+}
+
+message STC_PLAYERCHANGER_NOTITY_ROOM_MSG{
+	repeated PlayerServerInfo playerInfo =1;
+}
+
+message STC_START_NOTIFY_ROOM_MSG {
+	required uint32 hz = 1;    //客户端频率
+	required uint32 delay = 2; //延迟
+	required uint32 randomSeed = 3; //随机数种子
+}
+
+message CTS_KEYEVENT_ROOM_MSG {
+	 required bytes keyevent = 1; //玩家输入  
+}
+message STC_KEYEVENT_NOTIFY_ROOM_MSG {
+	 repeated FrameInput inputs = 1;
+}
+
+message CTS_GETKEYEVENT_ROOM_MSG{ 
+	required uint32 tick = 1;  //获取指定帧的数据
+}
+message STC_GETKEYEVENT_ROOM_MSG{
+	required FrameInput inputs = 1;
+}
+message CTS_REJOIN_ROOM_MSG{
+	required uint32 roleId  = 1;
+	required string token   = 2;
+}
+message STC_REJOIN_ROOM_MSG{
+	required uint32 curTick        = 1;
+	repeated FrameInput inputs   = 2;
+}
+
+message CTS_GAMEOVER_ROOM_MSG{
+	required uint32 roleId  = 1;
+}
+message STC_GAMEOVER_ROOM_MSG{
+}

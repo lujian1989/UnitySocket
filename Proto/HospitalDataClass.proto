@@ -1,0 +1,196 @@
+syntax = "proto2";
+package HorrorHospital_Data;
+import "protos/HardCordGirlDataClass.proto";
+
+
+message Source_ID_Data
+{
+               required uint32 id=1;
+             
+}
+
+message Source_ID_State_Data
+{
+               required uint32 id=1;
+               required uint32 state = 2;
+}
+
+message Source_ID_Bool_Data
+{
+               required uint32 id=1;
+               required bool state = 2;
+}
+
+message DicInt
+{
+	repeated int32 key = 1;
+	repeated int32 value = 2;
+}
+
+message Weapon
+{
+	required int32 weaponType = 1;	//武器类型
+	required int32 subType = 2;		//武器子类型
+	required int32 quantity = 3;		//武器数量(子弹，使用次数)
+}
+
+message WeaponList			//持有武器列表
+{
+	repeated Weapon listWeaponSpot = 1;
+}
+
+message Zombie_Info{
+
+				required int32 Id=1;              		//唯一标识
+				required string name=2;             	//名称
+				required int32 spawnTimes=3;           	//波数
+				required int32 type=4;             	//形象
+				required int32 attackSpeed=5;        	//攻击速度
+				required float attackInterval=6;     	//攻击频率
+				required int32 damage=7;             	//伤害
+				required float moveSpeed=8;          	//移动速度
+				required int32 hp=9;                 	//生命
+				required int32 score=10;              	//分数
+				required int32 dispearedTime=11;      	//死亡消失时间
+				required float attackDistance=12;     	//攻击距离
+				required int32 itemType=13;       	 	    //掉落物品的大类
+				required int32 subItemType=14;    	  	   	//掉落物品的子类
+				required int32 quantity=15;        	    //数量
+				required int32 code=16;					//怪物编号
+				required float damage_coeff=17;        	//伤害加成系数
+				required int32 chaseTime=18;			//追逐时间
+				required int32 chaseDistance=19;		//追逐距离
+};
+
+
+message SpawnZombie_MSG{
+
+                required Zombie_Info zombieInfo=1; 	//生成丧尸的属性
+                required int32 spawnPoint=2; 		//僵尸生成点
+				
+}
+
+message Damage_Info//僵尸受伤消息
+{
+	required int32 Id=1;              		//唯一标识
+	required int32 damage = 2;             	//伤害
+	required int32 gunType= 3;           	//枪支类型
+	required int32 playerId = 4;             	//玩家ID
+}
+
+message EquipWeapon_Info
+{
+	required int32 playerId = 1;
+	required int32 spot = 2;              		//槽位
+	required int32 weaponType = 3;             	//武器类型
+	required int32 subType= 4;           	//子类型
+}
+
+message ZombieDie_Info
+{
+	required int32 Id=1;              		//唯一标识
+	required int32 playerId=2;            //玩家ID
+	required int32 gunType=3;           	//枪支类型
+    required int32 itemType=4;            //掉落物品的大类
+    required int32 subItemType=5;         //掉落物品的子类
+    required int32 quantity=6;            //数量
+}
+
+message PlayerDamage_Info//玩家受伤消息
+{
+	required int32 playerId=1;              //玩家ID
+	required int32 damage = 2;             	//伤害
+	required int32 zombieId = 4;            //造成伤害的僵尸ID
+}
+
+
+message SpawnZombieNum		//同步当前波次的僵尸数量
+{
+	required int32 waves=1;              //波次
+	required int32 num=2;              //数量
+}
+
+message ZombieSkillInfo
+{
+	required int32 zombieId=1;		//僵尸Id
+	required int32 skillId=2;		//技能Id
+	required int32 teleportIndex=3;		//传送点索引
+	required int32 damage=4;		//伤害
+	required int32 targetId=5;		//目标玩家Id
+	required float lifeTime=6;		//生命周期
+	required bool  isPierce=7;		//是否穿透玩家
+	required bool isSummon=8;		//是否召唤技能
+	required HardCordGirl_Data.VECTOR3 targetPosition=9;//目标点位置
+}
+
+message TeleportZombieSyncInfo
+{
+	required int32 zombieId=1;		//僵尸Id
+	required HardCordGirl_Data.VECTOR3 pos=2;		//位置
+	required HardCordGirl_Data.VECTOR3 rot=3;		//方向
+}
+
+
+
+message DROPITEMINFO
+{
+	required int32 zombieId=1;		//僵尸id
+	repeated ITEMOBJECT dropItems=2;	//物品组
+	
+}
+
+message ITEMOBJECT
+{
+	required int32  itemId=1;		//物品id
+	required int32 count=2;		//数量
+}
+
+message CaughtEndInfo //同步抓捕
+{
+	required int32 zombieId=1;		//僵尸Id
+}
+
+message BeCaughtPlayerInfo   //被网住的玩家信息
+{
+         required int32 zombieId=1;	     //僵尸Id
+	required int32 playerId=2;              //玩家id
+}
+
+message HitLastEffectInfo
+{
+      required int32 skillId=1;	
+      required int32 playerId=2;
+      required int32 zombieId=3;	
+}
+
+message BuildingUnitHPInfo //建筑单位血量改修
+{
+	required int32 ID = 1;		//建筑单位Id
+	required int32 changeValue = 2;   //改变值 正负
+}
+
+message BuildingUnitStateInfo //建筑单位状态
+{
+	required int32 ID = 1;		//建筑单位Id
+	required int32 state = 2; //状态
+	required int32 hp = 3; //当前hp
+}
+
+message DropPointInfo //点位掉落
+{
+	required int32 ID = 1;   //Id
+	required int32 num = 2;  //已经创建一次了
+	required int32 state = 3;  //状态
+	required int32 createTime = 4; //创建的时间
+}
+
+message ZombieUsedSKillsInfo
+{
+	required int32 ZombieId = 1; 		//boss 客户端编号
+	required int32 Count = 2;			//释放技能计数
+	repeated int32 IDList = 3; 			//释放技能Id列表
+	required float AtkTime = 4;			//本次释放技能时间
+	required float IdleElapseTime = 5; 	//本次待机状态耗时
+	required float WalkElapseTime = 6;	//本次移动状态耗时
+	required float AttackElapseTime = 7;//本次攻击状态时长
+}

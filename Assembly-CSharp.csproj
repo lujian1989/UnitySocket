@@ -1,0 +1,1611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <_TargetFrameworkDirectories>non_empty_path_generated_by_unity.rider.package</_TargetFrameworkDirectories>
+    <_FullFrameworkReferenceAssemblyPaths>non_empty_path_generated_by_unity.rider.package</_FullFrameworkReferenceAssemblyPaths>
+    <DisableHandlePackageFileConflicts>true</DisableHandlePackageFileConflicts>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{d6f25b2e-c67f-f864-2463-275935bb2fd1}</ProjectGuid>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
+    <DefineConstants>UNITY_2021_3_3;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169,0649</NoWarn>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\network\response\KTVSendToAllResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallStartAnswerRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetShowRoomsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetRoomListByTypeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSetGuideResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateSubRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetSpecialGuestsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnShutupNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomKillNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnRecvFromTrialNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\AwardInfo.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\Packet.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandLikeHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\KTVClearNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallStartVoteRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandCheckEnterHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallManageCreateHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallRechargeKTVRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendBlackResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\MessageObj.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetFinalVoteToplistRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCreateKTVRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShopBuyItemResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnRecvFromClientNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServiceCenterTestResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateObjectRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSavePlayerStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\KTVOperateNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallManageGetHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetFreeRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateSubRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendCancelBlackRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShowSendToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShopBuyItemByGoldRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetTitlePrizesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSendFrameResponse.cs" />
+     <Compile Include="Assets\Scripts\network\service\ShopNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetKTVIsOpenResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateSubTempRoomsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallModifyVoteResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\StorageGetByUserIDResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendGetApplysResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallEndShowNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShowSendToAllResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalPlayerDeadNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendApplyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallLeaveHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\StreetPannelInfo.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\IJsonWrapper.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetRoleInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\BigPacketReader.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemEnterHallNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallModifyGuessGamePlayerDictResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomThunderSettleNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoleOnUpLevelNotify.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\RoomMsg.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendIsFriendResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\FriendNewApplyNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalSavePlayerNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomModifyRoomInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetFreeSubRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangePlayerPropertiesRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\SupportClass.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyGetPlayListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\service\AccountNetService.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg11Storage.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandGetHomelandInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleCheckSendDriftBottleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAddSpecialGuestRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemLeaveHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomStopFrameSyncRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallSetDeepLevelRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleReadReplyDialogueResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAutoChangeRoomStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\service\MelodyNetService.cs" />
+     <Compile Include="Assets\Scripts\network\entity\Hall.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServiceCenterAutoCreateAndGetServiceResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendGetFriendsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ERoomPlayer.cs" />
+     <Compile Include="Assets\Scripts\network\entity\DeepOverInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCreateKTVRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetRoomListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallKickoutFromKTVRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveGetUpWeaponCostRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallStopShowPlayBallScheduleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomDeadNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnDismissRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSetPlatformResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\GramophoneLeftMessageRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAutoChangeRoomStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShowGetPubDatasRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetChorusMembersRequest.cs" />
+     <Compile Include="Assets\Scripts\network\parser\GateSerializer.cs" />
+     <Compile Include="Assets\Scripts\network\entity\LevelInfo.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataTestData2Response.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomReqAiIdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\MailReadMailRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ShopInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\BackpackGetBackpacksResponse.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonWriter.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomClearChorusMemberResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCancelMatchRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSendToPlayersResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSavePlayerStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\PlayListInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHomePhotoFramesUrlNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomThunderStartFailNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleUseMoneyGunRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\MailDeleteMailRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckEnterRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleGetDriftBottleStateRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\CasterInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShowGetFreeRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetHomePhotoFramesUrlRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\CreateRoomType.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallRoomPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSetGuideRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemEncryptNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDeleteChorusMemberRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendGetBlacksRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendSearchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeObjectPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HomePhotoFramesUrl.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetFreeRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetActivityRewardInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDeepAddMaterialResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetRoleShareInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetChorusMembersResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\MailDeleteMailResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendGetFriendInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetOnlineGuluCoinResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\CollectionInfo.cs" />
+     <Compile Include="Assets\Scripts\network\Request.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShopBuyItemByGoldResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetKTVRoomsRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\ZInputStream.cs" />
+     <Compile Include="Assets\Scripts\network\Response.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalSaveObjectPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\AccountRegistGuestRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangePlayerPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendGetFriendInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDestroyObjectRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\StorageGetGlobalResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallClearVoteDataResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomRemovePlayerResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomOnAutoRequestFrameErrorRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\VoiceObj.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleGetDialoguesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemLeaveRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSetCharacterIdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ItemObj.cs" />
+     <Compile Include="Assets\Scripts\network\entity\BlackInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleBindAqiAccountResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketProcesser.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSavePlayerStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleGetRepliesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\VoteInfo.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketClient.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangePlayerStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVChooseRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetActivityRewardConfigResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangePlayerPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ERoomTeam.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSetGenderResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangePlayerStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSetHomePhotoFramesUrlRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandEnterMyHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\AudioInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallSetTitleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSellHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShopBuyItemRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\KTVNetService.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallStreetSetPannelNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallClearInternalListDataResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg4Room.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeRoomPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveObjectPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\FriendDeleteNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomExitToHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\TestData.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetRoomDetailResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemLoginRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalSavePlayerRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallStartAnswerResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetShowRoomsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeObjectStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ThunderMemberInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckKTVEnterValidResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg8Friend.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonException.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomRequestFrameResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleDeleteDriftBottleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\AccountRegistRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetUserPhotoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveAddGuluCoinRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetRoomInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveRoomStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\FriendFriendInfoNotify.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonMapper.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ReplyObj.cs" />
+     <Compile Include="Assets\Scripts\network\service\HallManageNetService.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\MsgPublicSubscribe.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVSongsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\BuyResultInfo.cs" />
+     <Compile Include="Assets\Scripts\network\entity\UserPhoto.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallStartAnswerNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShowGetPubDatasResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetInternalListRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServicePublishPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServiceUnsubscribeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetCharacterNameResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\AccountDeviceIdLoginResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSetPlatformRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnDestroyObjectNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomStartFrameSyncResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalMonsterNotify.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemOfflineResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEvent\CreateConnectionAsyncArgs.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemPingpongRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChooseInternalListNumRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataKeyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\UpWeaponCostInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVSongsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetShowPlayerSoundResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemEnterRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAddChorusMemberResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\HospitalDataClass.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalCreateMonsterRequest.cs" />
+     <Compile Include="Assets\Scripts\network\RoomProperty.cs" />
+     <Compile Include="Assets\Scripts\network\parser\HallSerializer.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\ProtoDefine.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCreateRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnChangeRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveRoomStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallAnswerRequest.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonData.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVSendToOthersRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\FriendNetService.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetRoomByIdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemLoginResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\KTVOnRecvFromClientNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveGetGiftsRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg6Basketball.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomClearSpecialGuestsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\StorageGetGlobalRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveObjectStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetActivityStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomStartFrameSyncRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalPlayerAttackRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckKTVEnterValidRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\PveNetService.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomAiIdChangedNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallPlayerStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendCancelBlackResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemUserOnlineNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckKTVFreeActivityOpenResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemPingpongResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallFastMatchRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\Zlib.cs" />
+     <Compile Include="Assets\Scripts\network\entity\OnlineGuluCoinInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallScoringResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallOperationKTVNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HallAndRoom.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallManageGetHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleBuyHomeLandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnStartFrameSyncNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetKTVRoomsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandRandHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandLikeHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveUpgradeWeaponResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallVoteResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckKTVFreeActivityOpenRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalCreateMonsterResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomAiLevelNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveObjectStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveClearDataRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSendFrameRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\AccountResetPwdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallOnDismissRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalPickItemRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallAddToInternalListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnPlayerStatusAndPropertiesChangedNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyGetCastersResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSetGenderRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleDragDriftBottleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetActivityRewardsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendGetApplysRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleGetUnReplyDialogueResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomBatchAddSpecialGuestRequest.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\Netstandard15Polyfill.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveBuyWeaponResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateSubTempRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemHostNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveBuyWeaponRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ActivityStatus.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HospitalMonsterObject.cs" />
+     <Compile Include="Assets\Scripts\network\service\ServiceCenterNetService.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallOpenShowNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendBlackRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServiceSubscribeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandRandHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleGetReplyDialoguesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\BackpackBackpackNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ScoringInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\ServiceOnSubscribePropertyNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSavePlayerStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnGameAwardNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomShutupResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetActivityRewardConfigRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomClearSpecialGuestsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetTimeFromOriStateRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomBatchAddSpecialGuestResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleGetDriftBottleStateResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\AccountLoginRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallSetDeepLevelResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveRoomPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg100Lockstep.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckCreateRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSendToAllResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetActivityStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\AccountLoginResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\MemberSettleInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallClearInternalListDataRequest.cs" />
+     <Compile Include="Assets\Scripts\TCPTestServer.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\InfBlocks.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomExitToHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOpenActivity1Notify.cs" />
+     <Compile Include="Assets\Scripts\network\service\HomelandNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomOnAutoRequestFrameErrorResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallMatchWithPlayerInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDeleteChorusMemberResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeRoomStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomThunderRoundStartNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallStartShowNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomStopFrameSyncResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\MailGetMailsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendConfirmRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallModifyGuessGamePlayerDictRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\DriftBottleNewReplyDialogueNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckPwdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEventDispatcher.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAddScoreRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HallRoomInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\DriftBottleNewDialogueNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAutoTrialToAllResponse.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\Tree.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveRoomStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\GuessGamePlayerInfos.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetThunderRoomInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDeepAddGuluCoinResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendIsFriendRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg5Activity.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleBuyHomeLandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallSetShowPlayerSoundRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyPlayRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnRoomStatusAndPropertiesChangedNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleBindAqiAccountRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\AccountDeviceIdLoginRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendConfirmResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckPwdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallKeepMatchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallOnNewRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckEnterHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetCharacterNameRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeObjectStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShopGetShopListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomLeaveRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveUpgradeWeaponRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalDamageNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetUserPhotoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetAnswerToplistResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveClearDataResponse.cs" />
+     <Compile Include="Assets\Scripts\network\Channel.cs" />
+     <Compile Include="Assets\TestScripts\TestzipWrapper.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckCreateRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSavePlayerPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ApplyInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallMatchFailNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\BackpackDeleteItemResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallKickoutFromKTVRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\RoleInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallKtvRoomTimeoutWarnNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveRoomStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveChangeGiftResponse.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\ParserToken.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangePlayerStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\BackpackUsePaperResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetInternalListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetActivityRewardsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomThunderRoundOverNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetFreeSubRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\UserBottleObj.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeObjectStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleUseMoneyGunResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleReadReplyDialogueRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetActivityStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDeepAddGuluCoinRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateSubTempRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\NetConfig.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallStartShowPlayBallScheduleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallMatchSuccessNotify.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\StaticTree.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallClearAnswerDataRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetRoomDetailResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetKTVStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\StorageGetResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCancelMatchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalMonsterAttackRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetStreetPannelInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVChooseResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveGetGiftsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSetCharacterIdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemReconnectResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeRoomPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\MailObj.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetScoringToplistRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomSpecialGuestsNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetRoomInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckMatchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\TCPCMDProcess.cs" />
+     <Compile Include="Assets\Scripts\network\SndBuf.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDeleteSpecialGuestResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketParser.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallRoomStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\AccountRegistResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ActivityRewards.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSetHomePhotoFramesUrlResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ThunderAwardInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendApplyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\StorageGetByUserIDRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeRoomStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomEnterRoomResponse.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\Deflate.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetRoomTimeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleSendDriftBottleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShowPubDataResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetRoomInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\TeamInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetServerMsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\parser\CoreSerializer.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetThunderRoomInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCreateTutorialRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAutoSendToAllResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetVoteToplistRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveObjectStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVChorusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSavePlayerStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\RoomNetService.cs" />
+     <Compile Include="Assets\Scripts\network\entity\UserWeaponInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\FriendNewFriendNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetServerTimeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemLeaveRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ThunderRoomInfo.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ReplyDialogueObj.cs" />
+     <Compile Include="Assets\Scripts\network\Notify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomReqAiIdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveRoomStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandEnterHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetRoomListRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallStartShowPlayBallScheduleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallRoomStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveAddMaterialRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeObjectPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyLikeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDeepAddMaterialRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShopGetShopListRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetDeepStageResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleSetCharacterNameRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallRechargeKTVRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\GramophoneReadMessageRequest.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemKickNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomDeleteGramophoneMsgNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetActivityRewardInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallDeleteInternalListResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallFastMatchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ActivityInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetGuessGamePlayerDictResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnObjectStatusAndPropertiesChangedNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalMonsterDeadNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetRoomTimeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallEnterHallWithPlayerInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemOfflineRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HospitalDropObject.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveObjectStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\GramophoneDeleteMessageRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeObjectStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\KillInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleGetRepliesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalPickItemResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDestroyAllObjectsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\DriftBottleObj.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVClearSongsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallClearVoteDataRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAttackRequest.cs" />
+     <Compile Include="Assets\Scripts\network\ProtoBufTest.cs" />
+     <Compile Include="Assets\Scripts\network\response\GramophoneDeleteMessageResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEvent\IProcessCMD.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\SocketCallBack.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg1Account.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg13Collocation.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetAnswerToplistRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandLeaveHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\MailAcceptItemsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveRoomPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HomelandDeleteGramophoneMsgNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnJoinRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemLeaveHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallDeleteInternalListRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeRoomStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallClearScoringDataResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetCharacterIdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetRoleShareInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HallNumInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HomelandEndRoomModeNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\BackpackGetBackpacksRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSavePlayerStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVDeleteRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetServerTimeResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\DropItemInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\GramophoneReadMessageResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveGetWeaponsResponse.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonReader.cs" />
+     <Compile Include="Assets\Scripts\network\request\BackpackUsePaperRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalPlayerAttackResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetHomePhotoFramesUrlResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\TitlePrizeInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomModifyRoomInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\SystemTipInfo.cs" />
+     <Compile Include="Assets\Scripts\network\service\ShowNetService.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveGetWeaponsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendGetFriendsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\BigPacketWriter.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCreateRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg12Theater.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketWriter.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallServerRestartNotify.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\ZStreamException.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeRoomStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallOpenActivityNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallModifyVoteRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ADL-Plugins\zip\webGLtvOS-Test\Scripts\testWebGLtvOS.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomShutupRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGetTimeFromOriStateResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleUseHomeLandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetOnlineGuluCoinRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnSystemTipNotify.cs" />
+     <Compile Include="Assets\Scripts\network\service\DatingNetService.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\JsonMockWrapper.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAutoTrialToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\HardCordGirlDataClass.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServiceSubscribeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnChangePlayerNetworkStateNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnLeaveRoomNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallSetShowPlayerSoundResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\ServicePublishResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\DriftBottleNewReplyNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveAddGuluCoinResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\TestProto.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCreateTutorialRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleGetReplyDialoguesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallPlayerPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalDropObjectExpireNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallEnterHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallRoomPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveRoomPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServicePublishPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallRandomDropItemResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalMonsterAttackResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoleOnJGLChangedNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallSetTitleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallStartShowPlayBallNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallModifyGuessGamePlayerNotify.cs" />
+     <Compile Include="Assets\Scripts\network\notify\ShowOnRecvFromClientNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\BackpackOpenGiftRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangePlayerStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVSendToOthersResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ERoom.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveGetMaterialRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetRoomDetailRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\StorageGetRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\ZStream.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleReplyDriftBottleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallEnterHallWithPlayerInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\PveChangeGiftRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandLeaveHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetRoomInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSavePlayerPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\service\SystemNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeRoomStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\HotMessage.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\request\SystemReconnectRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveObjectPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckEnterHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveObjectStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDeepEternityOverRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallManageCreateHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetTitlePrizesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallCheckMatchRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\ClassTool.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketBuilder.cs" />
+     <Compile Include="Assets\Scripts\network\service\HallNetService.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HallTitleNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyGetPlayListRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAddScoreResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDeepEternityOverResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallClearScoringDataRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallMatchResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeObjectPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveGetUpWeaponCostResponse.cs" />
+     <Compile Include="Assets\Scripts\network\service\MailNetService.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomEnterRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\DriftBottleNetService.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ERoomObject.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalResultNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAttackResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallPlayerStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetCharacterIdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangePlayerPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallClearAnswerDataResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ActivityRewardInfo.cs" />
+     <Compile Include="Assets\Scripts\network\service\GramophoneNetService.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleDragDriftBottleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetActivityStatusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalDropItemNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeRoomStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetKTVStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\ProtoBufData.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleUseHomeLandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVTopResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleGetDialoguesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomRemovePlayerRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendDeleteRequest.cs" />
+     <Compile Include="Assets\Scripts\network\CreateProtoBuf.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetGuessGamePlayerDictRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateSubRoomsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\response\SystemLeaveRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\DriftBottleReplyDriftBottleResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSavePlayerPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServicePublishRequest.cs" />
+     <Compile Include="Assets\Scripts\network\RcvBuf.cs" />
+     <Compile Include="Assets\Scripts\network\response\BackpackOpenGiftResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnRemovePlayerNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGameOutRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyGetCollectionsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\AnswerInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetServerMsResponse.cs" />
+     <Compile Include="Assets\ThirdTool\ADL-Plugins\zip\Plugins\lzip.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoleOnDeclareNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyCollectRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetLevelInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallAnswerResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomNewGramophoneMsgNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetDeepStageRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandEnterHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetRoomListByTypeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallRoomStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetHomePageInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HallPlayerInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\AccountResetPwdRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVChorusRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallMatchRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnCreateObjectNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomHospitalSaveObjectPropertiesRequest.cs" />
+     <Compile Include="Assets\TestScripts\ZipWrapper.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallEnterHallResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSendToOthersRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataTestData2Request.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\Inflate.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangePlayerStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallVoteRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallPlayerPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangePlayerStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\AIWorld.cs" />
+     <Compile Include="Assets\Scripts\network\NetUtilcs.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoleOnServerRestartNotify.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg2Role.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomRequestFrameRequest.cs" />
+     <Compile Include="Assets\Scripts\network\UdpChannel.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomTrialToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HLInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomHospitalPickNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomAddSpecialGuestResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyCollectResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeObjectStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataCenter.cs" />
+     <Compile Include="Assets\Scripts\network\Block.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetRoomByIdResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServiceCenterAutoCreateAndGetServiceRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleCheckSendDriftBottleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\Serializer.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallLeaveHallRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeObjectPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetFinalVoteToplistResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallPreEnterRoomRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\Adler32.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HallRoomDetail.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallCheckEnterRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAutoSendToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallMatchWithPlayerInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\Frame.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSendToOthersResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomClearChorusMemberRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\DeepEternityDataClass.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandEnterMyHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveRoomPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HomelandLike.cs" />
+     <Compile Include="Assets\Scripts\network\Session.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChooseInternalListNumResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\AccountRegistGuestResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\FrameItem.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetScoringToplistResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallPreEnterRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallScoringRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateObjectsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyGetCollectionsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleDeleteDriftBottleRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ADL-Plugins\zip\zipTest\Scripts\testZip.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HomelandStartRoomModeNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDismissRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\MailReadMailResponse.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\entity\ReconnectResult.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomAddChorusMemberRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetRoleInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\service\RoleNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomChangeRoomPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallStartVoteResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateObjectsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\SocketChannel.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Test.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveObjectPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDestroyObjectResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallRoomStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ChorusMember.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomLeaveRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallStopShowPlayBallScheduleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\NetworkState.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeRoomPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendGetBlacksResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\FriendInfo.cs" />
+     <Compile Include="Assets\Scripts\network\service\ActivityNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\FriendDeleteResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomTrialToAllResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ShopSellInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\GramophoneLeftMessageResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomHospitalSavePlayerResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\BackpackUseItemResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\StorageSetGlobalRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomDestroyAllObjectsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVTopRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\DialogueObj.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnRecvFrameNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\StorageSetGlobalResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVClearSongsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\GramophoneGetMessagesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\BackpackDeleteItemRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomChangeObjectStatusAndPropertiesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketReader.cs" />
+     <Compile Include="Assets\Scripts\network\request\StorageSetRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ShowPubDataRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\InfCodes.cs" />
+     <Compile Include="Assets\Scripts\network\entity\PlayerSoundInfo.cs" />
+     <Compile Include="Assets\Scripts\network\response\KTVDeleteResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\BroadcastData.cs" />
+     <Compile Include="Assets\Scripts\network\system\network\notify\SystemCloseNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveObjectStatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateObjectResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallKeepMatchRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\ShowGetFreeRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSendToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\StorageNetService.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyGetCastersRequest.cs" />
+     <Compile Include="Assets\Scripts\network\NetManage.cs" />
+     <Compile Include="Assets\ThirdTool\LitJson\Lexer.cs" />
+     <Compile Include="Assets\Scripts\network\entity\ShopsInfo.cs" />
+     <Compile Include="Assets\Scripts\network\notify\MailNewMailNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HomePageInfo.cs" />
+     <Compile Include="Assets\Scripts\network\service\ServiceNetService.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveAddMaterialResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\SpecialGuestInfo.cs" />
+     <Compile Include="Assets\Scripts\network\entity\FrameSyncState.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallAddToInternalListRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\InfTree.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSetCharacterNameResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomReadyOverNotify.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandCheckEnterHomelandRequest.cs" />
+     <Compile Include="Assets\Scripts\network\NodeClient.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleGetLevelInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\RandHomeland.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetStreetPannelInfoRequest.cs" />
+     <Compile Include="Assets\TestScripts\ZipTest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServiceCenterTestRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\HomelandNewGramophoneMsgNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\PropertyValue.cs" />
+     <Compile Include="Assets\Scripts\network\notify\ServiceOnSubscribeNotify.cs" />
+     <Compile Include="Assets\Scripts\network\entity\HospitalRefreshObject.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomGetSpecialGuestsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\KTVSendToAllRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetHomePageInfoResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallGetVoteToplistResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\StorageSetResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\BackpackUseItemRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallKickoutFromKTVRoomResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomCreateSubTempRoomsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSendToPlayersRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleSendDriftBottleRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\FriendSearchRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\MelodyLikeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\parser\RoomSerializer.cs" />
+     <Compile Include="Assets\Scripts\network\response\PveGetMaterialResponse.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomGameOutResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\GramophoneGetMessagesRequest.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoleSellHomelandResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\SongInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSaveObjectPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\OlderProto\Msg7Melody.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDismissRoomRequest.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomChorusMemberNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\MailAcceptItemsResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomDeleteSpecialGuestRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallChangeHallPlayerStatusAndPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\service\BackpackNetService.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomTeamNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HallChangeHallPlayerStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\notify\RoomOnStopFrameSyncNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\MelodyPlayResponse.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetShowPlayerSoundRequest.cs" />
+     <Compile Include="Assets\Scripts\network\entity\SubERoom.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoleGetKTVIsOpenRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEvent\SocketMessageReceivedFromServer.cs" />
+     <Compile Include="Assets\Scripts\network\response\RoomSaveRoomStatusAndPropertiesResponse.cs" />
+     <Compile Include="Assets\Scripts\network\StatusResponse.cs" />
+     <Compile Include="Assets\Scripts\network\entity\BackpackObj.cs" />
+     <Compile Include="Assets\Scripts\network\request\HomelandGetHomelandInfoRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\DriftBottleGetUnReplyDialogueRequest.cs" />
+     <Compile Include="Assets\ThirdTool\ZLIBnet\ZOutputStream.cs" />
+     <Compile Include="Assets\Scripts\network\request\MailGetMailsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomCreateSubRoomsRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\ServiceUnsubscribeRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Demo.cs" />
+     <Compile Include="Assets\Scripts\network\entity\RoleShareInfo.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallGetRoomDetailRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\RoomSavePlayerPropertyRequest.cs" />
+     <Compile Include="Assets\Scripts\network\request\HallRandomDropItemRequest.cs" />
+     <None Include="Assets\ThirdTool\LitJson\package.json" />
+     <None Include="Assets\ThirdTool\ADL-Plugins\zip\changelog.txt" />
+     <None Include="Assets\smcs.rsp" />
+     <None Include="Assets\ThirdTool\ADL-Plugins\zip\Plugins\tvOS\Readme-tvOS.txt" />
+     <None Include="Assets\ThirdTool\ADL-Plugins\zip\Plugins\Readme-MacOS.txt" />
+     <None Include="Assets\StreamingAssets\Json\test.json" />
+     <None Include="Assets\ThirdTool\ADL-Plugins\zip\Plugins\iOS\Readme-iOS.txt" />
+     <Reference Include="UnityEngine">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ARModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AccessibilityModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AndroidJNIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AnimationModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AssetBundleModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AudioModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ClothModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ClusterInputModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ClusterRendererModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.CoreModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.CrashReportingModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.DSPGraphModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.DirectorModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GameCenterModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GridModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.HotReloadModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.IMGUIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ImageConversionModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.InputModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.InputLegacyModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.JSONSerializeModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.LocalizationModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ParticleSystemModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.PerformanceReportingModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.PhysicsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Physics2DModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ProfilerModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ScreenCaptureModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SharedInternalsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpriteMaskModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpriteShapeModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.StreamingModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SubstanceModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SubsystemsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TLSModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TerrainModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TerrainPhysicsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextCoreFontEngineModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextCoreTextEngineModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextRenderingModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TilemapModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIElementsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIElementsNativeModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsNativeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UNETModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UNETModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UmbraModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityAnalyticsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityConnectModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityCurlModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityTestProtocolModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VFXModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VRModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VehiclesModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VideoModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VirtualTexturingModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.WindModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.XRModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.CoreModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.DeviceSimulatorModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.DiagnosticsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.GraphViewModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.PackageManagerUIModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.PackageManagerUIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.QuickSearchModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.SceneTemplateModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TextCoreFontEngineModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TextCoreTextEngineModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIBuilderModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIElementsModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIElementsSamplesModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIServiceModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIServiceModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UnityConnectModule">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.CompilerServices.Unsafe">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="JsonFx.Json">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\JsonFx.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="Google.Protobuf">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Assets\Plugins\Google.Protobuf.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.visualscripting@1.7.6\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Android.Types">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Android.Gradle">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+     </Reference>
+     <Reference Include="mscorlib">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
+     </Reference>
+     <Reference Include="System">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Core">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Runtime.Serialization.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.Linq">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Numerics">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Numerics.Vectors">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.Vectors.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Http">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Net.Http.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.CSharp">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Microsoft.CSharp.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Data">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Data.DataSetExtensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.DataSetExtensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Drawing">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Drawing.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression.FileSystem">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.FileSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Composition">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Transactions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Transactions.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.Win32.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\Microsoft.Win32.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="netstandard">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\netstandard.dll</HintPath>
+     </Reference>
+     <Reference Include="System.AppContext">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.AppContext.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Buffers">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Buffers.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.Concurrent">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Concurrent.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.NonGeneric">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.NonGeneric.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.Specialized">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Specialized.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Annotations">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Annotations.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.EventBasedAsync">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.EventBasedAsync.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.TypeConverter">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.TypeConverter.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Console">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Console.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Data.Common">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Data.Common.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Contracts">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Contracts.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Debug">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Debug.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.FileVersionInfo">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.FileVersionInfo.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Process">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Process.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.StackTrace">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.StackTrace.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.TextWriterTraceListener">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Tools">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Tools.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.TraceSource">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TraceSource.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Drawing.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Drawing.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Dynamic.Runtime">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Dynamic.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization.Calendars">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Calendars.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization.Extensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression.ZipFile">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Compression.ZipFile.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.DriveInfo">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.DriveInfo.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.Watcher">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Watcher.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.IsolatedStorage">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.IsolatedStorage.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.MemoryMappedFiles">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.MemoryMappedFiles.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Pipes">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Pipes.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.UnmanagedMemoryStream">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.UnmanagedMemoryStream.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Expressions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Expressions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Parallel">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Parallel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Queryable">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Queryable.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Memory">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Memory.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Http.Rtc">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Http.Rtc.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.NameResolution">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NameResolution.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.NetworkInformation">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NetworkInformation.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Ping">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Ping.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Requests">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Requests.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Security">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Security.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Sockets">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Sockets.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebHeaderCollection">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebHeaderCollection.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebSockets.Client">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.Client.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebSockets">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ObjectModel">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ObjectModel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.DispatchProxy">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.DispatchProxy.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit.ILGeneration">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.ILGeneration.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit.Lightweight">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.Lightweight.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Extensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.Reader">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Reader.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.ResourceManager">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.Writer">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Writer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.CompilerServices.VisualC">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Extensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Handles">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Handles.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Numerics">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Numerics.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Formatters">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Formatters.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Json">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Xml">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Xml.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Claims">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Claims.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Algorithms">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Algorithms.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Csp">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Csp.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Encoding">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Encoding.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.X509Certificates">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.X509Certificates.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Principal">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Principal.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.SecureString">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.SecureString.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.Duplex">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Duplex.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.Http">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Http.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.NetTcp">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.NetTcp.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.Primitives">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.Security">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Security.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Encoding">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Encoding.Extensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.RegularExpressions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.RegularExpressions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Overlapped">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Overlapped.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks.Extensions">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks.Parallel">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Parallel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Thread">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Thread.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.ThreadPool">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.ThreadPool.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Timer">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Timer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ValueTuple">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ValueTuple.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.ReaderWriter">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.ReaderWriter.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XDocument">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XmlDocument">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XmlSerializer">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlSerializer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XPath">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XPath.XDocument">
+     <HintPath>E:\workspace\UnityEditor\2021.3.3f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>C:\Users\lujian\Downloads\Unity3D-Protobuf-Socket-master\Unity3D-Protobuf-Socket-master\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{70c5c7f8-b273-792f-2c3a-c6b403209bd7}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

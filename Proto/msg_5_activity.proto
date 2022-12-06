@@ -1,0 +1,40 @@
+syntax = "proto2";
+package ACTIVITY_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "ACTIVITY_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_ACTIVITY = 5;
+};
+
+enum ACTION_RESULT
+{
+            SUCCESS=1;
+            FAILED=2;
+};
+
+enum CMD_ID{
+    STC_STREET_DANCE = 1;
+    CTS_STREET_DANCE = 2;
+    CTS_STREET_CMD=3;
+    STC_STREET_CMD=4;
+};
+
+
+message STC_STREET_DANCE_MSG {
+	required uint32 DANCE_INDEX = 1;   // 舞蹈编号
+	required uint32 DANCE_TIME = 2;   //舞蹈已持续时间
+};
+message CTS_STREET_CMD_MSG
+{
+                required string CMD_ID=1;
+};
+
+message STC_STREET_CMD_MSG
+{
+                required string CMD_ID=1;
+                required ACTION_RESULT RESULT= 2;  
+	optional string  INFO = 3;       //结果信息
+};

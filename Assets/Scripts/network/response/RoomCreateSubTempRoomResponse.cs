@@ -1,0 +1,41 @@
+using System.Collections.Generic;
+using network;
+using network.entity;
+using network.parser;
+
+namespace network.response
+{
+    public class RoomCreateSubTempRoomResponse : StatusResponse {
+        public Success success{ set; get; }
+
+        public int result;
+
+        public RoomCreateSubTempRoomResponse(Success susccess, Fail fail) {
+            this.success = susccess;
+            this.fail = fail;
+        }
+
+        public override string getCmd() {
+            return "Room:CreateSubTempRoom";
+        }
+
+        public override byte getClsID() {
+            return (byte)105;
+        }
+
+        public override byte getMethodID() {
+            return (byte)100;
+        }
+
+        public override void doSuccess() {
+            success?.Invoke(result);
+        }
+
+        public delegate void Success(int result);
+
+        public override void readBin(Block _block) {
+            result = _block.readInt();
+        }
+    }
+}
+

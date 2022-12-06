@@ -1,0 +1,25 @@
+
+syntax = "proto2";
+package PROTO_Test;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.ourpalm.tank.message";
+option java_outer_classname = "TEST_MSG";
+
+enum CMD_TYPE {
+    CMD_TYPE_TEST = 18;
+};
+
+
+
+message CTS_TEST_MSG {
+	required string id			= 1; //tokenId
+	required uint32 areaId		= 2; //分区ID
+	required string serviceId	= 3; //区分渠道号
+};
+
+message STC_TEST_MSG {
+	required string id			= 1; //tokenId
+	required uint32 areaId		= 2; //分区ID
+	required string serviceId	= 3; //区分渠道号
+};

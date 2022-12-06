@@ -1,0 +1,139 @@
+syntax = "proto2";
+package MELODY_MSG;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "cn.eden.gateway.message";
+option java_outer_classname = "MELODY_MSG";
+
+enum CMD_TYPE {
+    MSG_TYPE_MELODY = 7;
+};
+
+
+enum CMD_ID{
+    STC_COLLECTION = 1;
+    CTS_COLLECTION = 2;
+    STC_COLLECT = 3;
+    CTS_COLLECT = 4;
+    STC_LIKE = 5;
+    CTS_LIKE = 6;
+    STC_CASTERS = 7;
+    CTS_CASTERS = 8;
+    STC_PLAYLIST = 9;
+    CTS_PLAYLIST = 10;
+    STC_ENTER = 11;
+    CTS_ENTER = 12;
+    STC_PLAY = 13;
+    CTS_PLAY = 14;
+};
+
+message COLLECTION_INFO
+{
+	required uint32 AUDIO_ID = 1;	//音频ID
+	required string AUDIO_KEY = 2;	//音频key
+	required string AUDIO_NAME = 3;	//音频名
+	required uint32 AUDIO_DURATION = 4;//音频时长
+	required uint32 CASTER_ID = 5;//主播ID
+	required string CASTER_NAME = 6;//主播名
+	required string CASTER_PICTURE_KEY = 7;//主播头像资源KEY
+	required bool COLLECT = 8;	//是否收藏
+}
+
+message AUDIO_INFO
+{
+	required uint32 AUDIO_ID = 1;	//音频ID
+	required string AUDIO_KEY = 2;	//音频资源key
+	required string AUDIO_NAME = 3;	//音频名
+	required uint64 UPLOAD_TIME = 4;//上传时间
+	required bool COLLECTED = 5;	//是否已收藏
+	required bool LIKED = 6;	//是否已点赞
+	required int32 PLAY_COUNTS = 7;	//播放数
+	required int32 LIKES_COUNT = 8;	//点赞数
+	required int32 DURATION = 9;	//时长
+}
+
+message CASTER_INFO
+{
+	required string CASTER_NAME = 1;//主播名
+	required uint32 CASTER_ID = 2;	//主播ID
+	required uint32 HEAT = 3;	//热度
+}
+	       
+
+
+message STC_COLLECTION_MSG
+{
+	repeated COLLECTION_INFO LIST_COLLECTION_INFO = 1;	//收藏列表
+}
+
+message CTS_COLLECT_MSG
+{
+	required uint32 AUDIO_ID = 1;	//ID频key
+	required bool COLLECTED = 2;	//是否收藏
+}
+
+message STC_COLLECT_MSG
+{
+	required uint32 RESULT = 1;	//收藏结果
+	optional string RESULT_INFO = 2;//结果信息
+	required uint32 AUDIO_ID = 3;   //收藏音频ID
+	required bool COLLECTED = 4;   //是否收藏
+}
+
+message CTS_LIKE_MSG
+{
+	required uint32 AUDIO_ID = 1;
+	required bool LIKED = 2;	//是否喜欢
+}
+
+message STC_LIKE_MSG
+{
+	required uint32 RESULT = 1;	//点赞结果
+	optional string RESULT_INFO = 2;//结果信息
+	required uint32 AUDIO_ID = 3;   //点赞音频ID
+	required bool LIKED = 4;   //是否点赞
+	required uint32 LIKES_COUNT = 5;//点赞数
+}
+
+message CTS_CASTERS_MSG
+{
+	required uint32 CASTER_COUNT = 1;
+}
+
+message STC_CASTERS_MSG
+{
+	repeated CASTER_INFO LIST_CASTER = 1;	//主播列表
+}
+
+
+message STC_PLAYLIST_MSG
+{
+	required string CASTER_PICTURE_KEY = 1;	//主播头像资源key
+	repeated AUDIO_INFO LIST_AUDIO = 2;	//音频列表
+}
+
+message CTS_PLAYLIST_MSG
+{
+	required uint32 CASTER_ID = 1;
+}
+
+
+
+message STC_ENTER_MSG
+{
+	required uint32 RESULT = 1;	//进入结果
+	optional string RESULT_INFO = 2;//结果信息
+}
+
+message CTS_PLAY_MSG
+{
+	required uint32 AUDIO_ID = 1;
+}
+
+message STC_PLAY_MSG
+{
+	required uint32 RESULT = 1;	//播放结果
+	optional string RESULT_INFO = 2;//结果信息
+	required uint32 AUDIO_ID = 3;   //音频ID
+	required uint32 PLAY_COUNT = 4; //播放量
+}
