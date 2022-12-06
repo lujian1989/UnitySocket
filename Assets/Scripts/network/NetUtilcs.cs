@@ -34,97 +34,179 @@ namespace NewProto
             //step1 =====生成 proto CS 文件
             Assembly assembly = Assembly.GetExecutingAssembly();
             var files = GetTypesInNamespace(assembly, "NewProto");
-            using (StreamWriter sw =
-                   new StreamWriter(UnityEngine.Application.dataPath + "/Scripts/network/ProtoBufTest.cs", false))
+            foreach (var VARIABLE in files)
             {
-                sw.WriteLine("//动态生成，不要手动修改\n");
-                sw.WriteLine("using NewProto;");
-                foreach (var VARIABLE in files)
+                if (VARIABLE.Name.StartsWith("Request_") || VARIABLE.Name.StartsWith("Response_"))
                 {
-                    //Debug.Log(VARIABLE.Name);
-
-                    if (VARIABLE.Name.StartsWith("Request_") || VARIABLE.Name.StartsWith("Response_"))
+                    string[] sArray = VARIABLE.Name.Split('_');
+                    string clsID = sArray[sArray.Length - 2];
+                    string methodID = sArray[sArray.Length - 1];
+                    string genClassName = "";
+                    for (int i = 0; i < sArray.Length - 2; i++)
                     {
-                        string[] sArray = VARIABLE.Name.Split('_');
-                        string clsID = sArray[sArray.Length - 2];
-                        string methodID = sArray[sArray.Length - 1];
-                        string genClassName = "";
-                        for (int i = 0; i < sArray.Length - 2; i++)
+                        if (i == sArray.Length - 3)
                         {
-                            if (i == sArray.Length - 3)
-                            {
-                                genClassName += sArray[i];
-                            }
-                            else
-                                genClassName += sArray[i] + "_";
+                            genClassName += sArray[i];
                         }
+                        else
+                            genClassName += sArray[i] + "_";
+                    }
 
-                        string className = VARIABLE.Name;
-                        Debug.Log("clsID:" + clsID + ":methodID:" + methodID + " className:" + className +
-                                  " genClassName:" + genClassName);
+                    string className = VARIABLE.Name;
+                    Debug.Log("clsID:" + clsID + ":methodID:" + methodID + " className:" + className +
+                              " genClassName:" + genClassName);
+                    
+                    string path = String.Format(UnityEngine.Application.dataPath + "/Scripts/network/tcp/Model/{0}.cs",
+                        genClassName);
+                    if (VARIABLE.Name.StartsWith("Request_"))
+                    {
 
+                        using (StreamWriter sw =
+                               new StreamWriter(path, false))
+                        {
+                            sw.WriteLine("//动态生成，不要手动修改\n");
+                            sw.WriteLine("using NewProto;");
 
-                        sw.WriteLine("public class {0} :PacketWriter", genClassName);
-                        sw.WriteLine("{");
-                        sw.WriteLine("  public const int CLSID    ={0};", clsID);
-                        sw.WriteLine("  public const int METHODID ={0};", methodID);
-                        sw.WriteLine("  public {0}({1} protoData)", genClassName, className);
-                        sw.WriteLine("  {");
-                        sw.WriteLine("    this.clsID   = {0};", clsID);
-                        sw.WriteLine("    this.methodID = {0};", methodID);
-                        sw.WriteLine("    this.type     = {0};", "(byte)NET_CMD_TYPE.PB");
-                        sw.WriteLine("    this.protoData = protoData;");
-                        sw.WriteLine("  }");
-                        sw.WriteLine("}");
+                            sw.WriteLine("public class {0} :PacketWriter", genClassName);
+                            sw.WriteLine("{");
+                            sw.WriteLine("    public const int CLSID    ={0};", clsID);
+                            sw.WriteLine("    public const int METHODID ={0};", methodID);
+                            sw.WriteLine("    public {0}()", genClassName);
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        this.clsID    = CLSID;");
+                            sw.WriteLine("        this.methodID = METHODID;");
+                            sw.WriteLine("        this.type     = {0};", "(byte)NET_CMD_TYPE.PB");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("    public {0}({1} protoData)", genClassName, className);
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        this.clsID    = CLSID;");
+                            sw.WriteLine("        this.methodID = METHODID;");
+                            sw.WriteLine("        this.type     = {0};", "(byte)NET_CMD_TYPE.PB");
+                            sw.WriteLine("        SetBodyData(protoData);");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("}");
+                            clsIDList.Add(clsID);
+                            methodIDList.Add(methodID);
+                            genClassNameList.Add(genClassName);
+                            classNameList.Add(className);
+                        }
+                    }
+                    if (VARIABLE.Name.StartsWith("Response_"))
+                    {
 
-
-                        clsIDList.Add(clsID);
-                        methodIDList.Add(methodID);
-                        genClassNameList.Add(genClassName);
-                        classNameList.Add(className);
+                        using (StreamWriter sw =
+                               new StreamWriter(path, false))
+                        {
+                            sw.WriteLine("//动态生成，不要手动修改\n");
+                            sw.WriteLine("using network.tcp.DataCenter;");
+                            sw.WriteLine("using NewProto;");
+                            sw.WriteLine("using network;");
+                            sw.WriteLine("public class {0} :PacketReader", genClassName);
+                            sw.WriteLine("{");
+                            sw.WriteLine("    public event MessageProcCallback eventResponse;");
+                            sw.WriteLine("    public const int CLSID    ={0};", clsID);
+                            sw.WriteLine("    public const int METHODID ={0};", methodID);
+                            sw.WriteLine("    public {0}(MessageProcCallback rsp,bool isPackToBigMsg)", genClassName);
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        eventResponse = rsp;");
+                            sw.WriteLine("        if (isPackToBigMsg)");
+                            sw.WriteLine("        {");
+                            sw.WriteLine("            NodeClient.ins.onNotify(this);");
+                            sw.WriteLine("        }");
+                            sw.WriteLine("    }");
+                            
+                            sw.WriteLine("    public Response_Test()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("    public override string getCmd()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        return \"PB CLSID:\"+{0}+\"MethodID:\"+{1};",clsID,methodID);
+                            sw.WriteLine("    }");
+                            
+                            sw.WriteLine("    public override byte getClsID()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        return CLSID;");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("    public override byte getMethodID()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        return METHODID;");
+                            sw.WriteLine("    }");
+                            
+                            sw.WriteLine("    public override void readBin(Block block)");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        protoData = NetUtilcs.Deserialize<{0}>(block.getData());",className);
+                            sw.WriteLine("    }");
+                            
+                            sw.WriteLine("    public override void handleResult()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("         if (eventResponse!= null)");
+                            sw.WriteLine("         {");
+                            sw.WriteLine("            eventResponse(({0})protoData);",className);
+                            sw.WriteLine("         }");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("    private void MessageProc( object obj )");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("         if (eventResponse!= null)");
+                            sw.WriteLine("         {");
+                            sw.WriteLine("            eventResponse(({0})protoData);",className);
+                            sw.WriteLine("         }");
+                            sw.WriteLine("    }");
+                            
+                            sw.WriteLine("    public override Response newInstance()");
+                            sw.WriteLine("    {");
+                            sw.WriteLine("        {0} ins = new {1}();",genClassName,genClassName);
+                            sw.WriteLine("        ins.protoData = this.protoData;");
+                            sw.WriteLine("        return ins;");
+                            sw.WriteLine("    }");
+                            sw.WriteLine("}");
+                            clsIDList.Add(clsID);
+                            methodIDList.Add(methodID);
+                            genClassNameList.Add(genClassName);
+                            classNameList.Add(className);
+                        }
                     }
                 }
             }
 
             Debug.Log("<color=green>包装类路径：</color>" + UnityEngine.Application.dataPath +
                       "/Scripts/network/ProtoBufTest.cs");
-            //step2 =====生成 解析器
-            using (StreamWriter sw =
-                   new StreamWriter(UnityEngine.Application.dataPath + "/Scripts/network/CreateProtoBuf.cs", false))
-            {
-                sw.WriteLine("//动态生成，不要手动修改\n");
-                sw.WriteLine("using NewProto;");
-                sw.WriteLine("using Google.Protobuf;");
-                sw.WriteLine("namespace NewProto");
-                sw.WriteLine("{");
-                sw.WriteLine("    public static class CreateProtoBuf");
-                sw.WriteLine("    {");
-                sw.WriteLine("        public static IMessage GetProtoData(int protoId, byte[] msgData)");
-                sw.WriteLine("        {");
-                sw.WriteLine("            switch (protoId)");
-                sw.WriteLine("            {");
-                for (int i = 0; i < clsIDList.Count; i++)
-                {
-                    if (genClassNameList[i].StartsWith("Request")) //只生成响应类
-                    {
-                        continue;
-                    }
-
-
-                    sw.WriteLine("                case {0}.CLSID<<8 | {0}.METHODID:", genClassNameList[i]);
-                    sw.WriteLine("                    return NetUtilcs.Deserialize<{0}>(msgData);", classNameList[i]);
-                }
-
-                sw.WriteLine("                default:");
-                sw.WriteLine("                    return null;");
-                sw.WriteLine("            }");
-                sw.WriteLine("         }");
-                sw.WriteLine("    }");
-                sw.WriteLine("}");
-            }
-
-            Debug.Log("<color=green>解析类路径：</color>" + UnityEngine.Application.dataPath +
-                      "/Scripts/network/CreateProtoBuf.cs");
+            // //step2 =====生成 解析器
+            // using (StreamWriter sw =
+            //        new StreamWriter(UnityEngine.Application.dataPath + "/Scripts/network/CreateProtoBuf.cs", false))
+            // {
+            //     sw.WriteLine("//动态生成，不要手动修改\n");
+            //     sw.WriteLine("using NewProto;");
+            //     sw.WriteLine("using Google.Protobuf;");
+            //     sw.WriteLine("namespace NewProto");
+            //     sw.WriteLine("{");
+            //     sw.WriteLine("    public static class CreateProtoBuf");
+            //     sw.WriteLine("    {");
+            //     sw.WriteLine("        public static IMessage GetProtoData(int protoId, byte[] msgData)");
+            //     sw.WriteLine("        {");
+            //     sw.WriteLine("            switch (protoId)");
+            //     sw.WriteLine("            {");
+            //     for (int i = 0; i < clsIDList.Count; i++)
+            //     {
+            //         if (genClassNameList[i].StartsWith("Request")) //只生成响应类
+            //         {
+            //             continue;
+            //         }
+            //
+            //
+            //         sw.WriteLine("                case {0}.CLSID<<8 | {0}.METHODID:", genClassNameList[i]);
+            //         sw.WriteLine("                    return NetUtilcs.Deserialize<{0}>(msgData);", classNameList[i]);
+            //     }
+            //
+            //     sw.WriteLine("                default:");
+            //     sw.WriteLine("                    return null;");
+            //     sw.WriteLine("            }");
+            //     sw.WriteLine("         }");
+            //     sw.WriteLine("    }");
+            //     sw.WriteLine("}");
+            // }
+            //
+            // Debug.Log("<color=green>解析类路径：</color>" + UnityEngine.Application.dataPath +
+            //           "/Scripts/network/CreateProtoBuf.cs");
         }
 
         public static byte[] Serialize(IMessage msg)
@@ -310,27 +392,28 @@ namespace NewProto
             }
         }
 
-        public static void PacketMsg<T>(byte[] body,Response response,byte type) where T : PacketWriter
+        public static void PacketMsg<T>(byte[] body, Response response, byte type) where T : PacketWriter
         {
             //T pw = default(T);
             T pw = Activator.CreateInstance<T>();
             byte[] allMsg = body;
             bool isCompress = false;
-            if (allMsg.Length > DataCenter.packetProcesser.MaxZipSize)
+            if (allMsg.Length > PacketCenter.packetProcesser.MaxZipSize)
             {
                 isCompress = true;
                 allMsg = NetUtilcs.ZLibDotnetCompress(allMsg);
                 Debug.LogError("压缩后:" + allMsg.Length);
                 NetUtilcs.DebugBytes(allMsg);
             }
-            if (allMsg.Length > DataCenter.packetProcesser.MaxPaketSize)
+
+            if (allMsg.Length > PacketCenter.packetProcesser.MaxPaketSize)
             {
                 Queue<byte[]> queue = splitBody(allMsg);
                 for (;;)
                 {
                     byte[] b = queue.Dequeue();
                     bool end = queue.Count == 0 ? true : false;
-                 
+
                     PacketWriter packetWriter = new PacketWriter();
                     packetWriter.clsID = pw.clsID;
                     packetWriter.methodID = pw.methodID;
@@ -340,7 +423,7 @@ namespace NewProto
                     Debug.Log("aaa.：" + end + " isCompress:" + isCompress);
                     packetWriter.body = b;
                     //NodeClient.ins.send(bigPacketWriter,rsp1);
-                    NodeClient.ins.send(packetWriter,response);
+                    NodeClient.ins.send(packetWriter, response);
                     //NetManage.ins.send(packetWriter, (byte)NET_CMD_TYPE.PB);
                     if (end)
                         break;
@@ -358,13 +441,11 @@ namespace NewProto
                 Debug.Log("aaa.：" + end + " isCompress:" + isCompress);
                 packetWriter.body = allMsg;
                 //NetManage.ins.send(packetWriter, (byte)NET_CMD_TYPE.PB);
-                NodeClient.ins.send(packetWriter,response);
+                NodeClient.ins.send(packetWriter, response);
             }
         }
 
         public static Queue<byte[]> queue = new Queue<byte[]>();
-
-
         public static void PacketBigMsg2()
         {
             Debug.Log("PacketBigMsg2");
@@ -391,7 +472,7 @@ namespace NewProto
             // NetUtilcs.DebugBytes(allMsg);
             // allMsg = NetUtilcs.ZLibDotnetDecompress(allMsg);
             // NetUtilcs.DebugBytes(allMsg);
-            int MAX_LENGTH = DataCenter.packetProcesser.MaxPaketSize;
+            int MAX_LENGTH = PacketCenter.packetProcesser.MaxPaketSize;
 
             bool isCompress = false;
             if (allMsg.Length > MAX_LENGTH)
@@ -476,7 +557,7 @@ namespace NewProto
                 // temp[1] = pw.methodID;
                 //Array.Copy(pw.protoData.ToByteArray(),0,temp,2,pw.protoData.CalculateSize());
 
-                byte[] temp = DataCenter.PacketBuilder.Build(pw, (byte)NET_CMD_TYPE.PB, false);
+                byte[] temp = PacketCenter.PacketBuilder.Build(pw, (byte)NET_CMD_TYPE.PB, false);
 
                 list.Add(temp);
                 //Debug.LogError("实际包:"+temp.Length);
@@ -494,10 +575,10 @@ namespace NewProto
             // NetUtilcs.DebugBytes(allMsg);
             // allMsg = NetUtilcs.ZLibDotnetDecompress(allMsg);
             // NetUtilcs.DebugBytes(allMsg);
-            int MAX_LENGTH = DataCenter.packetProcesser.MaxPaketSize;
+            int MAX_LENGTH = PacketCenter.packetProcesser.MaxPaketSize;
 
             bool isCompress = false;
-            if (allMsg.Length > DataCenter.packetProcesser.MaxZipSize)
+            if (allMsg.Length > PacketCenter.packetProcesser.MaxZipSize)
             {
                 isCompress = true;
                 allMsg = NetUtilcs.ZLibDotnetCompress(allMsg);
@@ -568,7 +649,7 @@ namespace NewProto
 
         public static Queue<byte[]> splitBody(byte[] body)
         {
-            int MAX_LENGTH = DataCenter.packetProcesser.MaxPaketSize;
+            int MAX_LENGTH = PacketCenter.packetProcesser.MaxPaketSize;
             ;
             if (body == null || body.Length < 1)
                 throw new NullReferenceException();

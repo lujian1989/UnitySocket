@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class DataCenter {
+public class PacketCenter {
 
-    static private PacketBuilder _packetBuilder = null;
-    static public PacketBuilder PacketBuilder {
+    private static PacketBuilder _packetBuilder = null;
+    public static PacketBuilder PacketBuilder {
         get {
             if ( _packetBuilder == null ) {
                 _packetBuilder = new PacketBuilder();
@@ -13,8 +13,8 @@ public class DataCenter {
     }
 
 
-    static private PacketParser _packetParser = null;
-    static public PacketParser PacketParser {
+    private static PacketParser _packetParser = null;
+    public static PacketParser PacketParser {
         get {
             if ( _packetParser == null ) {
                 _packetParser = new PacketParser();
@@ -23,8 +23,8 @@ public class DataCenter {
         }
     }
 
-    static private PacketProcesser _packetProcesser = null;
-    static public PacketProcesser packetProcesser {
+    private static PacketProcesser _packetProcesser = null;
+    public static PacketProcesser packetProcesser {
         get {
             if ( _packetProcesser == null ) {
                 _packetProcesser = new PacketProcesser();

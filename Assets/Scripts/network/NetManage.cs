@@ -55,7 +55,7 @@ namespace network
         
         public void send(object msgObject,byte type)
         {
-             byte[] messageBytes = DataCenter.PacketBuilder.Build( msgObject,type );
+             byte[] messageBytes = PacketCenter.PacketBuilder.Build( msgObject,type );
              tcpChannel.send(messageBytes);
            
         }
@@ -445,7 +445,7 @@ namespace network
         /// <param name="data">一个完整的消息数据包</param>
         private void GetServerMessage(byte[] data) {
             Debug.Log("GetServerMessage");
-            DataCenter.PacketParser.Parse( data );
+            PacketCenter.PacketParser.Parse( data );
         }
 
 

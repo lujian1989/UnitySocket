@@ -133,7 +133,7 @@ public class Demo : MonoBehaviour {
                     pw.isEnd = 1;
                     pw.compress = 0;
                     pw.SetBodyData(protoData);
-                    byte[] temp = DataCenter.PacketBuilder.Build(pw, (byte)NET_CMD_TYPE.PB, false);
+                    byte[] temp = PacketCenter.PacketBuilder.Build(pw, (byte)NET_CMD_TYPE.PB, false);
                     list.Add(temp);
                 }
                 byte[] allMsg = list
@@ -203,15 +203,15 @@ public class Demo : MonoBehaviour {
             if (GUI.Button(new Rect(10, 400, 200, 50), "服务器->客户端"))
             {
                 
-                DataTestData2Response rsp = new DataTestData2Response((reslut) =>
-                {
-                    Debug.Log("Success!!!!!"+reslut );
-                    
-                }, (code, info) =>
-                {
-                    Debug.Log("Fail!!!!!" + code + "  info:" + info);
-                });
-                NodeClient.ins.onNotify(rsp);
+                // DataTestData2Response rsp = new DataTestData2Response((reslut) =>
+                // {
+                //     Debug.Log("Success!!!!!"+reslut );
+                //     
+                // }, (code, info) =>
+                // {
+                //     Debug.Log("Fail!!!!!" + code + "  info:" + info);
+                // });
+                //NodeClient.ins.onNotify(rsp);
                 
                 // TCPTestServer server = GameObject.Find("GameObject").GetComponent<TCPTestServer>();
                 // server.SendMessage();
@@ -250,7 +250,7 @@ public class Demo : MonoBehaviour {
     {
         Debug.Log("go to this GetServerMessage");
         // this.serverStr = ByteArrToString(bytes);
-        DataCenter.PacketParser.Parse( bytes );
+        PacketCenter.PacketParser.Parse( bytes );
         
     }
 

@@ -52,7 +52,6 @@
      <Compile Include="Assets\Scripts\network\notify\RoomKillNotify.cs" />
      <Compile Include="Assets\Scripts\network\notify\RoomOnRecvFromTrialNotify.cs" />
      <Compile Include="Assets\Scripts\network\entity\AwardInfo.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\Packet.cs" />
      <Compile Include="Assets\Scripts\network\response\HomelandLikeHomelandResponse.cs" />
      <Compile Include="Assets\Scripts\network\notify\KTVClearNotify.cs" />
      <Compile Include="Assets\Scripts\network\request\HallStartVoteRequest.cs" />
@@ -91,7 +90,7 @@
      <Compile Include="Assets\Scripts\network\entity\StreetPannelInfo.cs" />
      <Compile Include="Assets\ThirdTool\LitJson\IJsonWrapper.cs" />
      <Compile Include="Assets\Scripts\network\request\RoleGetRoleInfoRequest.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\BigPacketReader.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\BigPacketReader.cs" />
      <Compile Include="Assets\Scripts\network\system\network\notify\SystemEnterHallNotify.cs" />
      <Compile Include="Assets\Scripts\network\response\HallModifyGuessGamePlayerDictResponse.cs" />
      <Compile Include="Assets\Scripts\network\notify\RoomThunderSettleNotify.cs" />
@@ -135,7 +134,6 @@
      <Compile Include="Assets\Scripts\network\request\RoomGetChorusMembersRequest.cs" />
      <Compile Include="Assets\Scripts\network\parser\GateSerializer.cs" />
      <Compile Include="Assets\Scripts\network\entity\LevelInfo.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataTestData2Response.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomReqAiIdRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\MailReadMailRequest.cs" />
      <Compile Include="Assets\Scripts\network\entity\ShopInfo.cs" />
@@ -194,7 +192,7 @@
      <Compile Include="Assets\Scripts\network\entity\ItemObj.cs" />
      <Compile Include="Assets\Scripts\network\entity\BlackInfo.cs" />
      <Compile Include="Assets\Scripts\network\response\RoleBindAqiAccountResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketProcesser.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketProcesser.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomSavePlayerStatusAndPropertiesRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\DriftBottleGetRepliesRequest.cs" />
      <Compile Include="Assets\Scripts\network\entity\VoteInfo.cs" />
@@ -220,7 +218,6 @@
      <Compile Include="Assets\Scripts\network\response\RoomSaveObjectPropertyResponse.cs" />
      <Compile Include="Assets\Scripts\network\notify\FriendDeleteNotify.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomExitToHallResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\TestData.cs" />
      <Compile Include="Assets\Scripts\network\response\HallGetRoomDetailResponse.cs" />
      <Compile Include="Assets\Scripts\network\system\network\request\SystemLoginRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomHospitalSavePlayerRequest.cs" />
@@ -261,7 +258,6 @@
      <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEvent\CreateConnectionAsyncArgs.cs" />
      <Compile Include="Assets\Scripts\network\system\network\request\SystemPingpongRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\HallChooseInternalListNumRequest.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataKeyResponse.cs" />
      <Compile Include="Assets\Scripts\network\entity\UpWeaponCostInfo.cs" />
      <Compile Include="Assets\Scripts\network\request\KTVSongsRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\HallGetShowPlayerSoundResponse.cs" />
@@ -460,10 +456,10 @@
      <Compile Include="Assets\Scripts\network\notify\RoomSpecialGuestsNotify.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomGetRoomInfoResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\HallCheckMatchResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\TCPCMDProcess.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\TCPCMDProcess.cs" />
      <Compile Include="Assets\Scripts\network\SndBuf.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomDeleteSpecialGuestResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketParser.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketParser.cs" />
      <Compile Include="Assets\Scripts\network\request\HallChangeHallRoomStatusRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\AccountRegistResponse.cs" />
      <Compile Include="Assets\Scripts\network\entity\ActivityRewards.cs" />
@@ -535,10 +531,9 @@
      <Compile Include="Assets\Scripts\network\response\KTVClearSongsResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\HallClearVoteDataRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomAttackRequest.cs" />
-     <Compile Include="Assets\Scripts\network\ProtoBufTest.cs" />
      <Compile Include="Assets\Scripts\network\response\GramophoneDeleteMessageResponse.cs" />
      <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketEvent\IProcessCMD.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\SocketCallBack.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\GameSocket\SocketCallBack.cs" />
      <Compile Include="Assets\Scripts\OlderProto\Msg1Account.cs" />
      <Compile Include="Assets\Scripts\OlderProto\Msg13Collocation.cs" />
      <Compile Include="Assets\Scripts\network\request\HallGetAnswerToplistRequest.cs" />
@@ -572,10 +567,10 @@
      <Compile Include="Assets\Scripts\network\service\ShowNetService.cs" />
      <Compile Include="Assets\Scripts\network\request\PveGetWeaponsRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\FriendGetFriendsResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\BigPacketWriter.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\BigPacketWriter.cs" />
      <Compile Include="Assets\Scripts\network\response\HallCreateRoomResponse.cs" />
      <Compile Include="Assets\Scripts\OlderProto\Msg12Theater.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketWriter.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketWriter.cs" />
      <Compile Include="Assets\Scripts\network\notify\HallServerRestartNotify.cs" />
      <Compile Include="Assets\ThirdTool\ZLIBnet\ZStreamException.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomChangeRoomStatusResponse.cs" />
@@ -640,7 +635,7 @@
      <Compile Include="Assets\Scripts\network\request\HallGetTitlePrizesRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\HallCheckMatchRequest.cs" />
      <Compile Include="Assets\Scripts\OlderProto\ClassTool.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketBuilder.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketBuilder.cs" />
      <Compile Include="Assets\Scripts\network\service\HallNetService.cs" />
      <Compile Include="Assets\Scripts\network\notify\HallTitleNotify.cs" />
      <Compile Include="Assets\Scripts\network\request\MelodyGetPlayListRequest.cs" />
@@ -667,13 +662,11 @@
      <Compile Include="Assets\Scripts\network\notify\RoomHospitalDropItemNotify.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomChangeRoomStatusAndPropertyRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\HallGetKTVStatusResponse.cs" />
-     <Compile Include="Assets\Scripts\ProtoBufData.cs" />
      <Compile Include="Assets\Scripts\network\response\RoleUseHomeLandResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\KTVTopResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\DriftBottleGetDialoguesResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomRemovePlayerRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\FriendDeleteRequest.cs" />
-     <Compile Include="Assets\Scripts\network\CreateProtoBuf.cs" />
      <Compile Include="Assets\Scripts\network\request\HallGetGuessGamePlayerDictRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomCreateSubRoomsResponse.cs" />
      <Compile Include="Assets\Scripts\network\system\network\response\SystemLeaveRoomResponse.cs" />
@@ -707,7 +700,6 @@
      <Compile Include="Assets\TestScripts\ZipWrapper.cs" />
      <Compile Include="Assets\Scripts\network\response\HallEnterHallResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomSendToOthersRequest.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataTestData2Request.cs" />
      <Compile Include="Assets\ThirdTool\ZLIBnet\Inflate.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomChangePlayerStatusAndPropertyRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\HallVoteRequest.cs" />
@@ -725,7 +717,7 @@
      <Compile Include="Assets\Scripts\network\response\RoomAddSpecialGuestResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\MelodyCollectResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomChangeObjectStatusAndPropertyResponse.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\DataCenter.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketCenter.cs" />
      <Compile Include="Assets\Scripts\network\Block.cs" />
      <Compile Include="Assets\Scripts\network\response\HallGetRoomByIdResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\ServiceCenterAutoCreateAndGetServiceRequest.cs" />
@@ -797,7 +789,7 @@
      <Compile Include="Assets\Scripts\network\response\GramophoneGetMessagesResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\BackpackDeleteItemRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomChangeObjectStatusAndPropertiesRequest.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\DataCenter\PacketReader.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Packet\PacketReader.cs" />
      <Compile Include="Assets\Scripts\network\request\StorageSetRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\ShowPubDataRequest.cs" />
      <Compile Include="Assets\ThirdTool\ZLIBnet\InfCodes.cs" />
@@ -884,6 +876,8 @@
      <Compile Include="Assets\Scripts\network\request\HallGetRoomDetailRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomSavePlayerPropertyRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\HallRandomDropItemRequest.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Model\Response_Test.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Model\Request_Test.cs" />
      <None Include="Assets\ThirdTool\LitJson\package.json" />
      <None Include="Assets\ThirdTool\ADL-Plugins\zip\changelog.txt" />
      <None Include="Assets\smcs.rsp" />

@@ -13,6 +13,7 @@ using network.request;
 using network.response;
 using network.service;
 using network.tcp.DataCenter;
+using NewProto;
 using UnityEngine;  
 
 public class TCPTestServer : MonoBehaviour {  	
@@ -92,8 +93,8 @@ public class TCPTestServer : MonoBehaviour {
 			// Get a stream object for writing. 			
 			NetworkStream stream = connectedTcpClient.GetStream(); 			
 			if (stream.CanWrite) {  
-				TestTcpData req=new TestTcpData();
-				req.url= "This is a message from your server.This is a message from your server.This is a message from your server.This is a message from your server." +
+				Request_Test_100_101 req=new Request_Test_100_101();
+				req.Password= "This is a message from your server.This is a message from your server.This is a message from your server.This is a message from your server." +
 				                    "This is a message from your server." +
 				                    "This is a message from your server." +
 				                    "This is a message from your server." +
@@ -152,14 +153,7 @@ public class TCPTestServer : MonoBehaviour {
 				// Convert string message to byte array.                 
 				//byte[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(serverMessage); 
 				
-				
-				
-				req.version= 100;
-				req.id = 98;
-				req.name =99;
-				req.ids =222;
-				
-				byte[] serverMessageAsByteArray = DataCenter.PacketBuilder.Build( req );
+				byte[] serverMessageAsByteArray = PacketCenter.PacketBuilder.Build( req );
 			
 				
 				// Write byte array to socketConnection stream.               

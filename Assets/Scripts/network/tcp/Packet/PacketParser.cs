@@ -25,7 +25,7 @@ public class PacketParser
     /// <param name="data"></param>
     public void Parse(byte[] data,int readIndex = 0,bool isEncryption= true)
     {
-        Debug.Log("Parse: data.Length: " + data.Length+" key:"+DataCenter.packetProcesser.PublicKey);
+        Debug.Log("Parse: data.Length: " + data.Length+" key:"+PacketCenter.packetProcesser.PublicKey);
         // 解析数据包头
         Debug.LogError("readIndex:"+readIndex);
         int len = ReadInt32(data, readIndex);
@@ -34,7 +34,7 @@ public class PacketParser
         NetUtilcs.DebugBytes(data);
         if (isEncryption) //小包不需要异或加密
         {
-            data = NetUtilcs.DecodeBytes(data, DataCenter.packetProcesser.PublicKey==0?len:DataCenter.packetProcesser.PublicKey);
+            data = NetUtilcs.DecodeBytes(data, PacketCenter.packetProcesser.PublicKey==0?len:PacketCenter.packetProcesser.PublicKey);
         }
         NetUtilcs.DebugBytes(data);
         byte type = ReadByte(data, readIndex); // 读取消息名长度
@@ -203,8 +203,8 @@ public class PacketParser
                 Debug.Log("getPrivateKey===="+privateKey+" clsId:"+ clsID+ " methodID:"+methodID);
                 if (clsID == 0 &&  methodID== 0)
                 {
-                    DataCenter.packetProcesser.privateKey = privateKey;
-                    DataCenter.packetProcesser.PublicKey = privateKey;
+                    PacketCenter.packetProcesser.privateKey = privateKey;
+                    PacketCenter.packetProcesser.PublicKey = privateKey;
 
                     Array.Reverse(body);
 
@@ -221,10 +221,10 @@ public class PacketParser
                     }
                 
                   
-                    DataCenter.packetProcesser.MaxPaketSize = values[0];
-                    DataCenter.packetProcesser.MaxPaketSize = values[1];
-                    Debug.Log("maxPacketSize===="+DataCenter.packetProcesser.MaxPaketSize
-                    + " MaxZipSize:"+DataCenter.packetProcesser.MaxZipSize);
+                    PacketCenter.packetProcesser.MaxPaketSize = values[0];
+                    PacketCenter.packetProcesser.MaxPaketSize = values[1];
+                    Debug.Log("maxPacketSize===="+PacketCenter.packetProcesser.MaxPaketSize
+                    + " MaxZipSize:"+PacketCenter.packetProcesser.MaxZipSize);
                     
                 }
                 

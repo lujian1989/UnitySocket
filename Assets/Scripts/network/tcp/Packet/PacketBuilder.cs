@@ -44,8 +44,8 @@ public class PacketBuilder
             Debug.LogError("Error: protobuf class and name can not be null!");
             return null;
         }
-        DataCenter.packetProcesser.privateKey++;
-        Debug.Log("privateKey" + DataCenter.packetProcesser.privateKey);
+        PacketCenter.packetProcesser.privateKey++;
+        Debug.Log("privateKey" + PacketCenter.packetProcesser.privateKey);
         Request req = msgObject as Request;
         if (req != null)
         {
@@ -66,7 +66,7 @@ public class PacketBuilder
             WriteByte(ref packet, ref writeIndex, type);
             WriteByte(ref packet, ref writeIndex, end);
             WriteByte(ref packet, ref writeIndex, compress);
-            WriteInt32(ref packet, ref writeIndex, DataCenter.packetProcesser.privateKey);
+            WriteInt32(ref packet, ref writeIndex, PacketCenter.packetProcesser.privateKey);
             WriteByte(ref packet, ref writeIndex, clsID);
             WriteByte(ref packet, ref writeIndex, methodID);
             //body = block.getData();
@@ -76,7 +76,7 @@ public class PacketBuilder
             if (isEncryption)
             {
                 packet = NetUtilcs.EncryptionBytes(packet,
-                    DataCenter.packetProcesser.PublicKey == 0 ? len : DataCenter.packetProcesser.PublicKey);
+                    PacketCenter.packetProcesser.PublicKey == 0 ? len : PacketCenter.packetProcesser.PublicKey);
             }
             Debug.LogError("=====实际发送包=====");
             NetUtilcs.DebugBytes(packet);
