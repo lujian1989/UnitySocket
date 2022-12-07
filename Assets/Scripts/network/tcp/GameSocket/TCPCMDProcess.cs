@@ -43,8 +43,7 @@ public class TCPCMDProcess : IProcessCMD
         }
         Array.Copy( data, 0, this.buffer, this.writeIndex, actualSize );
         this.writeIndex += actualSize;
-
-        if( writeIndex < 4 ) {
+        if(this.writeIndex < 4 ) {
             return;
         }
         byte[] lenByte = new byte[4];
@@ -61,7 +60,6 @@ public class TCPCMDProcess : IProcessCMD
             Debug.Log( "begin parse "+buffer.Length);
             byte[] result = new byte[len];
             Array.Copy( this.buffer, 0, result, 0, len);
-            NetUtilcs.DebugBytes2(buffer);
             this.mCallback.SendMessage( result );
             bool isWait = false;
             if (writeIndex -len < 4 )
@@ -75,8 +73,6 @@ public class TCPCMDProcess : IProcessCMD
             
             //len = BitConverter.ToUInt16( this.buffer, 0 );
             Debug.LogError("解析后:"+buffer.Length);
-            NetUtilcs.DebugBytes2(buffer);
-
             if (isWait)
             {
                 return;

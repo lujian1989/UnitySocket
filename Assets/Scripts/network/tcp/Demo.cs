@@ -123,7 +123,7 @@ public class Demo : MonoBehaviour {
                 string str = System.Text.Encoding.UTF8.GetString(buffer);
                 List<byte[]> list = new List<byte[]>();
                 
-                for (int i = 0; i < 10; i++)
+                for (int i = 0; i < 100; i++)
                 {
                     Response_Test responseTest  = new Response_Test(Callback_Player,true);
                     Request_Test pw = new Request_Test();

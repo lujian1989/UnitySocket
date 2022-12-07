@@ -52,8 +52,8 @@
      <Compile Include="Assets\Scripts\network\notify\RoomKillNotify.cs" />
      <Compile Include="Assets\Scripts\network\notify\RoomOnRecvFromTrialNotify.cs" />
      <Compile Include="Assets\Scripts\network\entity\AwardInfo.cs" />
-     <Compile Include="Assets\Scripts\network\response\HomelandLikeHomelandResponse.cs" />
      <Compile Include="Assets\Scripts\network\notify\KTVClearNotify.cs" />
+     <Compile Include="Assets\Scripts\network\response\HomelandLikeHomelandResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\HallStartVoteRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\HomelandCheckEnterHomelandResponse.cs" />
      <Compile Include="Assets\Scripts\network\request\HallManageCreateHallRequest.cs" />
@@ -236,6 +236,7 @@
      <Compile Include="Assets\Scripts\network\request\RoomGetRoomInfoRequest.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomSaveRoomStatusAndPropertyResponse.cs" />
      <Compile Include="Assets\Scripts\network\notify\FriendFriendInfoNotify.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Model\Request_Test.cs" />
      <Compile Include="Assets\ThirdTool\LitJson\JsonMapper.cs" />
      <Compile Include="Assets\Scripts\network\entity\ReplyObj.cs" />
      <Compile Include="Assets\Scripts\network\service\HallManageNetService.cs" />
@@ -423,6 +424,7 @@
      <Compile Include="Assets\Scripts\network\response\PveChangeGiftResponse.cs" />
      <Compile Include="Assets\ThirdTool\LitJson\ParserToken.cs" />
      <Compile Include="Assets\Scripts\network\response\RoomChangePlayerStatusAndPropertyResponse.cs" />
+     <Compile Include="Assets\Scripts\network\tcp\Model\Response_Test.cs" />
      <Compile Include="Assets\Scripts\network\response\BackpackUsePaperResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\HallGetInternalListResponse.cs" />
      <Compile Include="Assets\Scripts\network\response\RoleGetActivityRewardsResponse.cs" />
@@ -876,8 +878,6 @@
      <Compile Include="Assets\Scripts\network\request\HallGetRoomDetailRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\RoomSavePlayerPropertyRequest.cs" />
      <Compile Include="Assets\Scripts\network\request\HallRandomDropItemRequest.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\Model\Response_Test.cs" />
-     <Compile Include="Assets\Scripts\network\tcp\Model\Request_Test.cs" />
      <None Include="Assets\ThirdTool\LitJson\package.json" />
      <None Include="Assets\ThirdTool\ADL-Plugins\zip\changelog.txt" />
      <None Include="Assets\smcs.rsp" />

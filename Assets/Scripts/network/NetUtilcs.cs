@@ -340,18 +340,6 @@ namespace NewProto
             Debug.Log("Byte Aarry size:" + buf.Length + " " + str);
         }
 
-        public static void DebugBytes2(byte[] buf)
-        {
-            string str = "[";
-            // for (int i = 0; i < buf.Length; i++)
-            // {
-            //     str += buf[i] + ",";
-            // }
-            //
-            // str += "]";
-            Debug.LogError("Byte Aarry size:" + buf.Length + " " + str);
-        }
-
         /// <summary>
         /// Byte 数组转十六进制字符串
         /// </summary>
